@@ -1,8 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 body {
+    display: flex;
+    justify-content: center;
     font-family: 'Nunito', sans-serif;
 }
-.signatures {
-    width: 120px;
-    height: 120px;
+.checkerboard {
+    display: flex;
+    flex-flow: row wrap;
+    width: 1408px;
+}
+
+.sidebar {
+    display: flex;
+    width: 128px;
+    height: 384px;
+    color: white;
+    font-size: 55px;
+    line-height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar__fes1 {
+    background-color: #e50080;
+}
+.sidebar__fes2 {
+    background-color: #1ab1f6;
+}
+.sidebar__fes3 {
+    background-color: #f8b656;
+}
+.sidebar__fes4 {
+    background-color: #da57d8;
+}
+.sidebar__party1 {
+    background-color: #fb8a9b;
+    font-size: 45px;
+}
+.sidebar__party2 {
+    background-color: #1a737d;
+    font-size: 45px;
+}
+
+.background {
+    display: flex;
+    width: 1280px;
+    height: 384px;
+    flex-flow: row wrap;
+    background-color: #180134;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    width: 128px;
+    height: 128px;
+}
+.signature {
+    position: absolute;
+}
+.limitbreak {
+    position: absolute;
 }
