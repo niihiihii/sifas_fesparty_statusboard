@@ -47,6 +47,8 @@ body {
     width: 1280px;
     height: 384px;
     flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
     background-color: #180134;
 }
 
@@ -55,6 +57,14 @@ body {
     position: relative;
     width: 128px;
     height: 128px;
+
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+
 }
 .signature {
     position: absolute;
