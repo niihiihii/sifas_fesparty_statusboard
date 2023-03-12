@@ -5,15 +5,18 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 .checkerboard {
-    display: flex;
-    flex-flow: row wrap;
     width: 1408px;
+}
+
+.section {
+    display: flex;
 }
 
 .sidebar {
     display: flex;
     width: 128px;
-    height: 384px;
+    min-width: 128px;
+    min-height: 128px;
     color: white;
     font-size: 55px;
     line-height: 100%;
@@ -41,11 +44,14 @@ body {
     background-color: #1a737d;
     font-size: 45px;
 }
+.sidebar__event {
+    background-color: #c40035;
+    font-size: 40px;
+}
 
 .background {
     display: flex;
     width: 1280px;
-    height: 384px;
     flex-flow: row wrap;
     align-items: flex-start;
     align-content: flex-start;
@@ -71,4 +77,58 @@ img {
 }
 .limitbreak {
     position: absolute;
+}
+
+@media screen and (min-width: 256px) and (max-width: 383px) {
+    .checkerboard {
+        width: 256px;
+    }
+}
+
+@media screen and (min-width: 384px) and (max-width: 511px) {
+    .checkerboard {
+        width: 384px;
+    }
+}
+
+@media screen and (min-width: 512px) and (max-width: 639px) {
+    .checkerboard {
+        width: 512px;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+    .checkerboard {
+        width: 640px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 895px) {
+    .checkerboard {
+        width: 768px;
+    }
+}
+
+@media screen and (min-width: 896px) and (max-width: 1023px) {
+    .checkerboard {
+        width: 896px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1151px) {
+    .checkerboard {
+        width: 1024px;
+    }
+}
+
+@media screen and (min-width: 1152px) and (max-width: 1279px) {
+    .checkerboard {
+        width: 1152px;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1407px) {
+    .checkerboard {
+        width: 1280px;
+    }
 }
