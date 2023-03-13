@@ -64,8 +64,10 @@ body {
 img {
     display: block;
     width: 9vw;
+    height: 9vw;
     max-width: 128px;
     max-height: 128px;
+    object-fit: contain;
 
 }
 
