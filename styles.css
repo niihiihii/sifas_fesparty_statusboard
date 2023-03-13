@@ -3,9 +3,11 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Nunito', sans-serif;
+    margin: 0;
 }
 .checkerboard {
-    width: 1408px;
+    max-width: 1408px;
+    width: 99vw;
 }
 
 .section {
@@ -14,11 +16,11 @@ body {
 
 .sidebar {
     display: flex;
-    width: 128px;
-    min-width: 128px;
-    min-height: 128px;
+    max-width: 128px;
+    width: 9vw;
+    min-height: 9vw;
     color: white;
-    font-size: 55px;
+    font-size: 4vw;
     line-height: 100%;
     text-align: center;
     justify-content: center;
@@ -38,40 +40,40 @@ body {
 }
 .sidebar__party1 {
     background-color: #fb8a9b;
-    font-size: 45px;
+    font-size: 3.5vw;
 }
 .sidebar__party2 {
     background-color: #1a737d;
-    font-size: 45px;
+    font-size: 3.5vw;
 }
 .sidebar__event {
     background-color: #c40035;
-    font-size: 40px;
+    font-size: 3vw;
 }
 
 .background {
     display: flex;
-    width: 1280px;
+    max-width: 1280px;
+    width: 90vw;
     flex-flow: row wrap;
     align-items: flex-start;
     align-content: flex-start;
     background-color: #180134;
 }
 
+img {
+    display: block;
+    width: 9vw;
+    max-width: 128px;
+    max-height: 128px;
+
+}
+
 .card {
     display: flex;
     position: relative;
-    width: 128px;
-    height: 128px;
-
 }
 
-img {
-    display: block;
-    width: 100%;
-    height: auto;
-
-}
 .signature {
     position: absolute;
 }
@@ -79,56 +81,3 @@ img {
     position: absolute;
 }
 
-@media screen and (min-width: 256px) and (max-width: 383px) {
-    .checkerboard {
-        width: 256px;
-    }
-}
-
-@media screen and (min-width: 384px) and (max-width: 511px) {
-    .checkerboard {
-        width: 384px;
-    }
-}
-
-@media screen and (min-width: 512px) and (max-width: 639px) {
-    .checkerboard {
-        width: 512px;
-    }
-}
-
-@media screen and (min-width: 640px) and (max-width: 767px) {
-    .checkerboard {
-        width: 640px;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 895px) {
-    .checkerboard {
-        width: 768px;
-    }
-}
-
-@media screen and (min-width: 896px) and (max-width: 1023px) {
-    .checkerboard {
-        width: 896px;
-    }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1151px) {
-    .checkerboard {
-        width: 1024px;
-    }
-}
-
-@media screen and (min-width: 1152px) and (max-width: 1279px) {
-    .checkerboard {
-        width: 1152px;
-    }
-}
-
-@media screen and (min-width: 1280px) and (max-width: 1407px) {
-    .checkerboard {
-        width: 1280px;
-    }
-}
