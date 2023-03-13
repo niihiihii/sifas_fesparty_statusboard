@@ -20,7 +20,7 @@ body {
     width: 9vw;
     min-height: 9vw;
     color: white;
-    font-size: 4vw;
+    font-size: 3.9vw;
     line-height: 100%;
     text-align: center;
     justify-content: center;
@@ -40,15 +40,15 @@ body {
 }
 .sidebar__party1 {
     background-color: #fb8a9b;
-    font-size: 3.5vw;
+    font-size: 3.2vw;
 }
 .sidebar__party2 {
     background-color: #1a737d;
-    font-size: 3.5vw;
+    font-size: 3.2vw;
 }
 .sidebar__event {
     background-color: #c40035;
-    font-size: 3vw;
+    font-size: 2.8vw;
 }
 
 .background {
@@ -81,3 +81,19 @@ img {
     position: absolute;
 }
 
+@media screen and (min-width: 1408px) {
+    .sidebar {
+        font-size: 55px;
+        min-height: 128px;
+    }
+    .sidebar__party1 {
+        font-size: 45px;
+    }
+    .sidebar__party2 {
+        font-size: 45px;
+    }
+    .sidebar__event {
+        font-size: 40px;
+    }
+
+}
