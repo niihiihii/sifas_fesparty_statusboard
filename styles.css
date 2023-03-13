@@ -72,6 +72,10 @@ img {
 }
 
 .card {
+    width: 9vw;
+    height: 9vw;
+    max-width: 128px;
+    max-height: 128px;
     display: flex;
     position: relative;
     justify-content: center;
