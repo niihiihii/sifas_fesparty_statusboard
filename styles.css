@@ -84,9 +84,11 @@ img {
 
 .signature {
     position: absolute;
+    opacity: 0%;
 }
 .limitbreak {
     position: absolute;
+    opacity: 0%;
 }
 
 @media screen and (min-width: 1408px) {
