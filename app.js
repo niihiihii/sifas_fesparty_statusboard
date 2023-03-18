@@ -4,21 +4,23 @@ const normal_cards = document.querySelectorAll(".normal-card");
 
 const fes_count = [];
 
-// for (let i = 0; i < fes_cards.length; i++) {
-//     fes_count.push(0);
-// }
+for (let i = 0; i < fes_cards.length; i++) {
+    fes_count.push(0);
+}
 
 const party_count = [];
 
-// for (let i = 0; i < party_cards.length; i++) {
-//     party_count.push(0);
-// }
+for (let i = 0; i < party_cards.length; i++) {
+    party_count.push(0);
+}
 
 const normal_count = [];
 
-// for (let i = 0; i < normal_cards.length; i++) {
-//     normal_count.push(0);
-// }
+for (let i = 0; i < normal_cards.length; i++) {
+    normal_count.push(0);
+}
+
+//fes_count, party_count, normal_count를 db에 저장하면 됨
 
 function changeFesCard(num) {
         if (fes_count[num] % 7 === 0) {
