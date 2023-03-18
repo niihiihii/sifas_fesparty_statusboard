@@ -46,9 +46,9 @@ body {
     background-color: #1a737d;
     font-size: 3.2vw;
 }
-.sidebar__event {
+.sidebar__normal {
     background-color: #c40035;
-    font-size: 2.8vw;
+    font-size: 2.46vw;
 }
 
 .background {
@@ -104,8 +104,8 @@ img {
     .sidebar__party2 {
         font-size: 45px;
     }
-    .sidebar__event {
-        font-size: 40px;
+    .sidebar__normal {
+        font-size: 35px;
     }
 
 }
