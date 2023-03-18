@@ -22,7 +22,7 @@ for (let i = 0; i < normal_cards.length; i++) {
 
 //fes_count, party_count, normal_count를 db에 저장하면 됨
 
-function changeFesCard(num) {
+function displayFesCard(num) {
         if (fes_count[num] % 7 === 0) {
             fes_cards[num].children[0].style.opacity = "30%";
             fes_cards[num].children[1].style.opacity = "0%";
@@ -87,10 +87,13 @@ function changeFesCard(num) {
             fes_cards[num].children[6].style.opacity = "0%";
             fes_cards[num].children[7].style.opacity = "100%";
         }
-        fes_count[num]++;
+}
+function changeFesCard(num) {
+    fes_count[num]++;
+    displayFesCard(num);
 }
 
-function changePartyCard(num) {
+function displayPartyCard(num) {
     if (party_count[num] % 7 === 0) {
         party_cards[num].children[0].style.opacity = "30%";
         party_cards[num].children[1].style.opacity = "0%";
@@ -155,10 +158,13 @@ function changePartyCard(num) {
         party_cards[num].children[6].style.opacity = "0%";
         party_cards[num].children[7].style.opacity = "100%";
     }
+}
+function changePartyCard(num) {
     party_count[num]++;
+    displayPartyCard(num);
 }
 
-function changeNormalCard(num) {
+function displayNormalCard(num) {
     if (normal_count[num] % 7 === 0) {
         normal_cards[num].children[0].style.opacity = "30%";
         normal_cards[num].children[1].style.opacity = "0%";
@@ -223,17 +229,20 @@ function changeNormalCard(num) {
         normal_cards[num].children[6].style.opacity = "0%";
         normal_cards[num].children[7].style.opacity = "100%";
     }
+}
+function changeNormalCard(num) {
     normal_count[num]++;
+    displayNormalCard(num);
 }
 
 for (let i = 0; i < fes_cards.length; i++) {
-    changeFesCard(i);
+    displayFesCard(i);
 }
 for (let i = 0; i < party_cards.length; i++) {
-    changePartyCard(i);
+    displayPartyCard(i);
 }
 for (let i = 0; i < normal_cards.length; i++) {
-    changeNormalCard(i);
+    displayNormalCard(i);
 }
 
 for (let i = 0; i < fes_cards.length; i++) {
