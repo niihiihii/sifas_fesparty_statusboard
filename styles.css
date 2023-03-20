@@ -2,8 +2,14 @@
 body {
     display: flex;
     justify-content: center;
-    font-family: 'Nunito', sans-serif;
     margin: 0;
+}
+.frame {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    max-width: 1408px;
+    width: 99vw;
 }
 .checkerboard {
     max-width: 1408px;
@@ -20,9 +26,6 @@ body {
     width: 9vw;
     min-height: 9vw;
     color: white;
-    font-size: 3.9vw;
-    line-height: 100%;
-    text-align: center;
     justify-content: center;
     align-items: center;
 }
@@ -77,7 +80,6 @@ img {
     max-width: 128px;
     max-height: 128px;
     display: flex;
-    position: relative;
     justify-content: center;
     align-items: center;
 }
@@ -93,19 +95,23 @@ img {
     opacity: 0%;
 }
 
+.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: 'Nunito', sans-serif;
+    background-color: #ff51c4;
+    font-size: 20px;
+    color: white;
+    width: 128px;
+    height: 42px;
+    margin: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
 @media screen and (min-width: 1408px) {
     .sidebar {
-        font-size: 55px;
         min-height: 128px;
     }
-    .sidebar__party1 {
-        font-size: 45px;
-    }
-    .sidebar__party2 {
-        font-size: 45px;
-    }
-    .sidebar__normal {
-        font-size: 35px;
-    }
-
 }
