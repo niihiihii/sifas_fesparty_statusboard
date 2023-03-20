@@ -254,3 +254,18 @@ for (let i = 0; i < party_cards.length; i++) {
 for (let i = 0; i < normal_cards.length; i++) {
     normal_cards[i].addEventListener("click", () => changeNormalCard(i));
 }
+
+function downImg(){
+	html2canvas(document.querySelector(".checkerboard"),{ logging: true, letterRendering: 1, allowTaint: false,  useCORS: true }).then(function(canvas){
+		const myImage = canvas.toDataURL();
+		downloadURI(myImage, "image.png") 
+	});
+}
+
+function downloadURI(url, name){
+	const link = document.createElement("a")
+	link.download = name;
+	link.href = url;
+	document.body.appendChild(link);
+	link.click();
+}

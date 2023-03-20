@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 body {
     display: flex;
     justify-content: center;
-    font-family: 'Nunito', sans-serif;
     margin: 0;
+}
+.frame {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    max-width: 1408px;
+    width: 99vw;
 }
 .checkerboard {
     max-width: 1408px;
@@ -77,7 +82,6 @@ img {
     max-width: 128px;
     max-height: 128px;
     display: flex;
-    position: relative;
     justify-content: center;
     align-items: center;
 }
@@ -91,6 +95,16 @@ img {
 .limitbreak {
     position: absolute;
     opacity: 0%;
+}
+
+.button {
+    background-color: #E7D600;
+    width: 9vw;
+    height: 3vw;
+    max-width: 128px;
+    max-height: 42px;
+    margin: 20px;
+    border-radius: 50px;
 }
 
 @media screen and (min-width: 1408px) {
