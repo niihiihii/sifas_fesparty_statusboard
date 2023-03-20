@@ -101,12 +101,12 @@ img {
     appearance: none;
     font-family: 'Nunito', sans-serif;
     background-color: #ff51c4;
-    font-size: 1.4vw;
+    font-size: 30px;
     color: white;
-    width: 15vw;
-    height: 6vw;
-    margin: 1.4vw;
-    border-radius: 0.7vw;
+    width: 150px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 10px;
     border: none;
 }
 
