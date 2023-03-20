@@ -101,10 +101,10 @@ img {
     appearance: none;
     font-family: 'Nunito', sans-serif;
     background-color: #ff51c4;
-    font-size: 20px;
+    font-size: 1.4vw;
     color: white;
-    width: 150px;
-    height: 42px;
+    width: 11vw;
+    height: 3vw;
     margin: 20px;
     border-radius: 10px;
     border: none;
