@@ -101,15 +101,22 @@ img {
     appearance: none;
     font-family: 'Nunito', sans-serif;
     background-color: #ff51c4;
-    font-size: 30px;
+    font-size: 5vw;
     color: white;
-    width: 150px;
-    height: 100px;
-    margin: 20px;
+    width: 24vw;
+    height: 16vw;
+    max-width: 150px;
+    max-height: 100px;
+    margin: 3.2vw;
     border-radius: 10px;
     border: none;
 }
 
+@media screen and (min-width: 625px) {
+    .button {
+        font-size: 30px;
+    }
+}
 @media screen and (min-width: 1408px) {
     .sidebar {
         min-height: 128px;
