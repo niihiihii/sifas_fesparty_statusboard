@@ -2829,7 +2829,7 @@
         </div>
         <button class="button downImgButton" type="button" onclick="downImg()">Save<br>Image</button>
         <button class="button inputDataButton" type="button">Input<br>Data</button>
-        <dialog>
+        <dialog class="inputDataModal">
             <div class="modal_body">
                 <div class="input_body">
                     <div>
@@ -2848,7 +2848,14 @@
                 <button class="button applyDataButton" type="button" onclick="applyData()">Apply<br>Data</button>
             </div>
         </dialog>
-        <button class="button copyDataButton" type="button" onclick="copyData()">Copy<br>Data</button>
+        <button class="button printDataButton" type="button" onclick="printData()">Copy<br>Data</button>
+        <dialog class="copyDataModal">
+            <div class="modal_body">
+                <textarea class="dataArea" spellcheck="false"></textarea>
+                <button class="button copyDataModalButton copyDataButton" type="button" onclick="copyData()">Copy<br>Data</button>
+                <button class="button copyDataModalButton closeButton" type="button" onclick="copyDataModal.close();">Close</button>
+            </div>
+        </dialog>
     </div>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
     <script src="app.js"></script>

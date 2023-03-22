@@ -290,11 +290,11 @@ function applyData() {
         displayNormalCard(i);
     }
 
-    dialog.close();
+    inputDataModal.close();
     
 }
 
-function copyData() {
+function makeData() {
     for (let i = 0; i < fes_count.length; i++) {
         fes_count[i] = fes_count[i] % 7;
     }
@@ -306,14 +306,28 @@ function copyData() {
     for (let i = 0; i < normal_count.length; i++) {
         normal_count[i] = normal_count[i] % 7;
     }
-    const data = "fes_data = " + fes_count + "\n" + "party_data = " + party_count + "\n" + "normal_data = " + normal_count;
-    navigator.clipboard.writeText(data.replace(/,/g, ""));
+    let data = "fes_data = " + fes_count + "\n" + "party_data = " + party_count + "\n" + "normal_data = " + normal_count;
+    data = data.replace(/,/g, "");
+    return data;
+}
+
+function printData() {
+    const data = makeData();
+    const dataArea = document.querySelector(".dataArea");
+    dataArea.value = data;
+    copyDataModal.showModal();
+}
+
+function copyData() {
+    const data = makeData();
+    navigator.clipboard.writeText(data);
     alert("Data Copied"); 
 }
 
+const copyDataModal = document.querySelector(".copyDataModal");
 const inputDataButton = document.querySelector(".inputDataButton");
-const dialog = document.querySelector("dialog");
+const inputDataModal = document.querySelector(".inputDataModal");
 
 inputDataButton.addEventListener("click", () => {
-    dialog.showModal();
+    inputDataModal.showModal();
 });
