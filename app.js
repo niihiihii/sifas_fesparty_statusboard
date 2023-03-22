@@ -4,9 +4,9 @@ const normal_cards = document.querySelectorAll(".normal-card");
 const mapfn = (arg) => Number(arg)
 
 
-const fes_count_input = window.prompt("input fes_count");
-const party_count_input = window.prompt("input party_count");
-const normal_count_input = window.prompt("input normal_count");
+const fes_count_input = window.prompt("input fes_data");
+const party_count_input = window.prompt("input party_data");
+const normal_count_input = window.prompt("input normal_data");
 
 const fes_count = [];
 const fes_count_data = Array.from(fes_count_input, mapfn);
@@ -40,8 +40,6 @@ for (let i = 0; i < normal_count_data.length; i++) {
 for (let i = 0; i < normal_cards.length - normal_count_data.length; i++) {
     normal_count.push(0);
 }
-
-//fes_count, party_count, normal_count를 db에 저장하면 됨
 
 function displayFesCard(num) {
         if (fes_count[num] % 7 === 0) {
@@ -303,7 +301,7 @@ function copyData() {
     for (let i = 0; i < normal_count.length; i++) {
         normal_count[i] = normal_count[i] % 7;
     }
-    const data = "fes_count = " + fes_count + "\n" + "party_count = " + party_count + "\n" + "normal_count = " + normal_count;
+    const data = "fes_data = " + fes_count + "\n" + "party_data = " + party_count + "\n" + "normal_data = " + normal_count;
     console.log(typeof(data));
     navigator.clipboard.writeText(data.replace(/,/g, ""));
     alert("Data Copied"); 
