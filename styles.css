@@ -112,9 +112,71 @@ img {
     border: none;
 }
 
+.applyDataButton {
+    margin: 0;
+}
+dialog {
+    background-color: #F8C8C4;
+    border: 0;
+    border-radius: 20px;
+    -ms-overflow-style: none;  /* IE and Edge 스크롤바 없애기*/
+    scrollbar-width: none; /*Firefox 스크롤바 없애기*/
+}
+
+dialog::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera 스크롤바 없애기*/
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal_body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 40vw;
+    max-width: 250px;
+    max-height: 250px;
+}
+.input_body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 16vw;
+    max-height: 100px;
+}
+
+label {
+    display:inline-block;
+    font-family: 'Nunito', sans-serif;
+    color: #ff51c4;
+    font-size: 2.56vw; 
+    width: 16vw;
+    line-height: 100%;
+    max-width: 100px;
+}
+input {
+	width: 16vw;
+    max-width: 100px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #b2ffdd;
+}
+
+input:focus {
+    outline: 2px solid #00C7B1;
+}
+
 @media screen and (min-width: 625px) {
     .button {
         font-size: 30px;
+    }
+    label {
+        font-size: 16px;
     }
 }
 @media screen and (min-width: 1408px) {

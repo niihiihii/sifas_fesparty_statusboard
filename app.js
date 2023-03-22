@@ -1,43 +1,22 @@
 const fes_cards = document.querySelectorAll(".fes-card");
 const party_cards = document.querySelectorAll(".party-card");
 const normal_cards = document.querySelectorAll(".normal-card");
-const mapfn = (arg) => Number(arg)
-
-
-const fes_count_input = window.prompt("input fes_data");
-const party_count_input = window.prompt("input party_data");
-const normal_count_input = window.prompt("input normal_data");
 
 const fes_count = [];
-const fes_count_data = Array.from(fes_count_input, mapfn);
 
-for (let i = 0; i < fes_count_data.length; i++) {
-    fes_count[i] = fes_count_data[i];
-}
-
-for (let i = 0; i < fes_cards.length - fes_count_data.length; i++) {
+for (let i = 0; i < fes_cards.length; i++) {
     fes_count.push(0);
 }
 
 const party_count = [];
-const party_count_data = Array.from(party_count_input, mapfn);;
 
-for (let i = 0; i < party_count_data.length; i++) {
-    party_count[i] = party_count_data[i];
-}
-
-for (let i = 0; i < party_cards.length - party_count_data.length; i++) {
+for (let i = 0; i < party_cards.length; i++) {
     party_count.push(0);
 }
 
 const normal_count = [];
-const normal_count_data = Array.from(normal_count_input, mapfn);;
 
-for (let i = 0; i < normal_count_data.length; i++) {
-    normal_count[i] = normal_count_data[i];
-}
-
-for (let i = 0; i < normal_cards.length - normal_count_data.length; i++) {
+for (let i = 0; i < normal_cards.length; i++) {
     normal_count.push(0);
 }
 
@@ -255,16 +234,6 @@ function changeNormalCard(num) {
 }
 
 for (let i = 0; i < fes_count.length; i++) {
-    displayFesCard(i);
-}
-for (let i = 0; i < party_count.length; i++) {
-    displayPartyCard(i);
-}
-for (let i = 0; i < normal_count.length; i++) {
-    displayNormalCard(i);
-}
-
-for (let i = 0; i < fes_count.length; i++) {
     fes_cards[i].addEventListener("click", () => changeFesCard(i));
 }
 for (let i = 0; i < party_count.length; i++) {
@@ -289,6 +258,42 @@ function downloadURI(url, name){
 	link.click();
 }
 
+function applyData() {
+    const fes_count_input = document.getElementById("fes_data").value;
+    const party_count_input = document.getElementById("party_data").value;
+    const normal_count_input =document.getElementById("normal_data").value;
+    const mapfn = (arg) => Number(arg)
+
+    const fes_count_data = Array.from(fes_count_input, mapfn);
+    const party_count_data = Array.from(party_count_input, mapfn);
+    const normal_count_data = Array.from(normal_count_input, mapfn);
+
+    for (let i = 0; i < fes_count_data.length; i++) {
+        fes_count[i] = fes_count_data[i];
+    }
+    
+    for (let i = 0; i < party_count_data.length; i++) {
+        party_count[i] = party_count_data[i];
+    }
+    
+    for (let i = 0; i < normal_count_data.length; i++) {
+        normal_count[i] = normal_count_data[i];
+    }
+
+    for (let i = 0; i < fes_count.length; i++) {
+        displayFesCard(i);
+    }
+    for (let i = 0; i < party_count.length; i++) {
+        displayPartyCard(i);
+    }
+    for (let i = 0; i < normal_count.length; i++) {
+        displayNormalCard(i);
+    }
+
+    dialog.close();
+    
+}
+
 function copyData() {
     for (let i = 0; i < fes_count.length; i++) {
         fes_count[i] = fes_count[i] % 7;
@@ -302,7 +307,13 @@ function copyData() {
         normal_count[i] = normal_count[i] % 7;
     }
     const data = "fes_data = " + fes_count + "\n" + "party_data = " + party_count + "\n" + "normal_data = " + normal_count;
-    console.log(typeof(data));
     navigator.clipboard.writeText(data.replace(/,/g, ""));
     alert("Data Copied"); 
 }
+
+const inputDataButton = document.querySelector(".inputDataButton");
+const dialog = document.querySelector("dialog");
+
+inputDataButton.addEventListener("click", () => {
+    dialog.showModal();
+});
