@@ -1,3 +1,14 @@
+/* block 'double tap zoomin zoomout' */
+let lastTouchEnd = 0; 
+
+document.documentElement.addEventListener('touchend', function (event) {
+     let now = (new Date()).getTime();
+     if (now - lastTouchEnd <= 300) {
+          event.preventDefault(); 
+        } lastTouchEnd = now; 
+    }, false);
+/* block 'double tap zoomin zoomout' */
+
 const fes_cards = document.querySelectorAll(".fes-card");
 const party_cards = document.querySelectorAll(".party-card");
 const normal_cards = document.querySelectorAll(".normal-card");
