@@ -324,6 +324,33 @@ function copyData() {
     alert("Data Copied"); 
 }
 
+function idolizedOn() {
+    const cards = document.querySelectorAll(".card");
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].children[0].src = cards[i].children[0].src.replace(/_idolized|.png/g, "") + "_idolized.png"
+    }
+}
+
+function idolizedOff() {
+    const cards = document.querySelectorAll(".card");
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].children[0].src = cards[i].children[0].src.replace("_idolized", "")
+    }
+}
+
+function idolizedOnOff() {
+    switch_click_count++;
+    if (switch_click_count % 2 === 0) {
+        idolizedOff();
+    } else {
+        idolizedOn();
+    }
+}
+const idolizedSwitch = document.querySelector(".idolizedSwitch");
+let switch_click_count = 0;
+idolizedSwitch.addEventListener("click", idolizedOnOff);
+
+
 const copyDataModal = document.querySelector(".copyDataModal");
 const inputDataButton = document.querySelector(".inputDataButton");
 const inputDataModal = document.querySelector(".inputDataModal");
