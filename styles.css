@@ -99,6 +99,9 @@ img {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Nunito', sans-serif;
     background-color: #ff51c4;
     font-size: 3vw;

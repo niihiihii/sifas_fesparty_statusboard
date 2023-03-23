@@ -20,70 +20,43 @@ for (let i = 0; i < normal_cards.length; i++) {
     normal_count.push(0);
 }
 
+const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/limitbreak/";
+
 function displayFesCard(num) {
         if (fes_count[num] % 7 === 0) {
             fes_cards[num].children[0].style.opacity = "30%";
             fes_cards[num].children[1].style.opacity = "0%";
             fes_cards[num].children[2].style.opacity = "0%";
-            fes_cards[num].children[3].style.opacity = "0%";
-            fes_cards[num].children[4].style.opacity = "0%";
-            fes_cards[num].children[5].style.opacity = "0%";
-            fes_cards[num].children[6].style.opacity = "0%";
-            fes_cards[num].children[7].style.opacity = "0%";
         } else if (fes_count[num] % 7 === 1) {
+            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak0.png";
             fes_cards[num].children[0].style.opacity = "100%";
             fes_cards[num].children[1].style.opacity = "0%";
             fes_cards[num].children[2].style.opacity = "100%";
-            fes_cards[num].children[3].style.opacity = "0%";
-            fes_cards[num].children[4].style.opacity = "0%";
-            fes_cards[num].children[5].style.opacity = "0%";
-            fes_cards[num].children[6].style.opacity = "0%";
-            fes_cards[num].children[7].style.opacity = "0%";
         } else if (fes_count[num] % 7 === 2) {
+            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak1.png";
             fes_cards[num].children[0].style.opacity = "100%";
             fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
-            fes_cards[num].children[3].style.opacity = "100%";
-            fes_cards[num].children[4].style.opacity = "0%";
-            fes_cards[num].children[5].style.opacity = "0%";
-            fes_cards[num].children[6].style.opacity = "0%";
-            fes_cards[num].children[7].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "100%";
         } else if (fes_count[num] % 7 === 3) {
+            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak2.png";
             fes_cards[num].children[0].style.opacity = "100%";
             fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
-            fes_cards[num].children[3].style.opacity = "0%";
-            fes_cards[num].children[4].style.opacity = "100%";
-            fes_cards[num].children[5].style.opacity = "0%";
-            fes_cards[num].children[6].style.opacity = "0%";
-            fes_cards[num].children[7].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "100%";
         } else if (fes_count[num] % 7 === 4) {
+            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak3.png";
             fes_cards[num].children[0].style.opacity = "100%";
             fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
-            fes_cards[num].children[3].style.opacity = "0%";
-            fes_cards[num].children[4].style.opacity = "0%";
-            fes_cards[num].children[5].style.opacity = "100%";
-            fes_cards[num].children[6].style.opacity = "0%";
-            fes_cards[num].children[7].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "100%";
         } else if (fes_count[num] % 7 === 5) {
+            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak4.png";
             fes_cards[num].children[0].style.opacity = "100%";
             fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
-            fes_cards[num].children[3].style.opacity = "0%";
-            fes_cards[num].children[4].style.opacity = "0%";
-            fes_cards[num].children[5].style.opacity = "0%";
-            fes_cards[num].children[6].style.opacity = "100%";
-            fes_cards[num].children[7].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "100%";
         } else {
+            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak5.png";
             fes_cards[num].children[0].style.opacity = "100%";
             fes_cards[num].children[1].style.opacity = "100%";
-            fes_cards[num].children[2].style.opacity = "0%";
-            fes_cards[num].children[3].style.opacity = "0%";
-            fes_cards[num].children[4].style.opacity = "0%";
-            fes_cards[num].children[5].style.opacity = "0%";
-            fes_cards[num].children[6].style.opacity = "0%";
-            fes_cards[num].children[7].style.opacity = "100%";
+            fes_cards[num].children[2].style.opacity = "100%";
         }
 }
 function changeFesCard(num) {
@@ -96,65 +69,36 @@ function displayPartyCard(num) {
         party_cards[num].children[0].style.opacity = "30%";
         party_cards[num].children[1].style.opacity = "0%";
         party_cards[num].children[2].style.opacity = "0%";
-        party_cards[num].children[3].style.opacity = "0%";
-        party_cards[num].children[4].style.opacity = "0%";
-        party_cards[num].children[5].style.opacity = "0%";
-        party_cards[num].children[6].style.opacity = "0%";
-        party_cards[num].children[7].style.opacity = "0%";
     } else if (party_count[num] % 7 === 1) {
+        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak0.png";
         party_cards[num].children[0].style.opacity = "100%";
         party_cards[num].children[1].style.opacity = "0%";
         party_cards[num].children[2].style.opacity = "100%";
-        party_cards[num].children[3].style.opacity = "0%";
-        party_cards[num].children[4].style.opacity = "0%";
-        party_cards[num].children[5].style.opacity = "0%";
-        party_cards[num].children[6].style.opacity = "0%";
-        party_cards[num].children[7].style.opacity = "0%";
     } else if (party_count[num] % 7 === 2) {
+        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak1.png";
         party_cards[num].children[0].style.opacity = "100%";
         party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
-        party_cards[num].children[3].style.opacity = "100%";
-        party_cards[num].children[4].style.opacity = "0%";
-        party_cards[num].children[5].style.opacity = "0%";
-        party_cards[num].children[6].style.opacity = "0%";
-        party_cards[num].children[7].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "100%";
     } else if (party_count[num] % 7 === 3) {
+        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak2.png";
         party_cards[num].children[0].style.opacity = "100%";
         party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
-        party_cards[num].children[3].style.opacity = "0%";
-        party_cards[num].children[4].style.opacity = "100%";
-        party_cards[num].children[5].style.opacity = "0%";
-        party_cards[num].children[6].style.opacity = "0%";
-        party_cards[num].children[7].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "100%";
     } else if (party_count[num] % 7 === 4) {
+        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak3.png";
         party_cards[num].children[0].style.opacity = "100%";
         party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
-        party_cards[num].children[3].style.opacity = "0%";
-        party_cards[num].children[4].style.opacity = "0%";
-        party_cards[num].children[5].style.opacity = "100%";
-        party_cards[num].children[6].style.opacity = "0%";
-        party_cards[num].children[7].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "100%";
     } else if (party_count[num] % 7 === 5) {
+        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak4.png";
         party_cards[num].children[0].style.opacity = "100%";
         party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
-        party_cards[num].children[3].style.opacity = "0%";
-        party_cards[num].children[4].style.opacity = "0%";
-        party_cards[num].children[5].style.opacity = "0%";
-        party_cards[num].children[6].style.opacity = "100%";
-        party_cards[num].children[7].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "100%";
     } else {
+        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak5.png";
         party_cards[num].children[0].style.opacity = "100%";
         party_cards[num].children[1].style.opacity = "100%";
-        party_cards[num].children[2].style.opacity = "0%";
-        party_cards[num].children[3].style.opacity = "0%";
-        party_cards[num].children[4].style.opacity = "0%";
-        party_cards[num].children[5].style.opacity = "0%";
-        party_cards[num].children[6].style.opacity = "0%";
-        party_cards[num].children[7].style.opacity = "100%";
+        party_cards[num].children[2].style.opacity = "100%";
     }
 }
 function changePartyCard(num) {
@@ -167,65 +111,36 @@ function displayNormalCard(num) {
         normal_cards[num].children[0].style.opacity = "30%";
         normal_cards[num].children[1].style.opacity = "0%";
         normal_cards[num].children[2].style.opacity = "0%";
-        normal_cards[num].children[3].style.opacity = "0%";
-        normal_cards[num].children[4].style.opacity = "0%";
-        normal_cards[num].children[5].style.opacity = "0%";
-        normal_cards[num].children[6].style.opacity = "0%";
-        normal_cards[num].children[7].style.opacity = "0%";
     } else if (normal_count[num] % 7 === 1) {
+        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak0.png";
         normal_cards[num].children[0].style.opacity = "100%";
         normal_cards[num].children[1].style.opacity = "0%";
         normal_cards[num].children[2].style.opacity = "100%";
-        normal_cards[num].children[3].style.opacity = "0%";
-        normal_cards[num].children[4].style.opacity = "0%";
-        normal_cards[num].children[5].style.opacity = "0%";
-        normal_cards[num].children[6].style.opacity = "0%";
-        normal_cards[num].children[7].style.opacity = "0%";
     } else if (normal_count[num] % 7 === 2) {
+        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak1.png";
         normal_cards[num].children[0].style.opacity = "100%";
         normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
-        normal_cards[num].children[3].style.opacity = "100%";
-        normal_cards[num].children[4].style.opacity = "0%";
-        normal_cards[num].children[5].style.opacity = "0%";
-        normal_cards[num].children[6].style.opacity = "0%";
-        normal_cards[num].children[7].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "100%";
     } else if (normal_count[num] % 7 === 3) {
+        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak2.png";
         normal_cards[num].children[0].style.opacity = "100%";
         normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
-        normal_cards[num].children[3].style.opacity = "0%";
-        normal_cards[num].children[4].style.opacity = "100%";
-        normal_cards[num].children[5].style.opacity = "0%";
-        normal_cards[num].children[6].style.opacity = "0%";
-        normal_cards[num].children[7].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "100%";
     } else if (normal_count[num] % 7 === 4) {
+        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak3.png";
         normal_cards[num].children[0].style.opacity = "100%";
         normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
-        normal_cards[num].children[3].style.opacity = "0%";
-        normal_cards[num].children[4].style.opacity = "0%";
-        normal_cards[num].children[5].style.opacity = "100%";
-        normal_cards[num].children[6].style.opacity = "0%";
-        normal_cards[num].children[7].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "100%";
     } else if (normal_count[num] % 7 === 5) {
+        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak4.png";
         normal_cards[num].children[0].style.opacity = "100%";
         normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
-        normal_cards[num].children[3].style.opacity = "0%";
-        normal_cards[num].children[4].style.opacity = "0%";
-        normal_cards[num].children[5].style.opacity = "0%";
-        normal_cards[num].children[6].style.opacity = "100%";
-        normal_cards[num].children[7].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "100%";
     } else {
+        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak5.png";
         normal_cards[num].children[0].style.opacity = "100%";
         normal_cards[num].children[1].style.opacity = "100%";
-        normal_cards[num].children[2].style.opacity = "0%";
-        normal_cards[num].children[3].style.opacity = "0%";
-        normal_cards[num].children[4].style.opacity = "0%";
-        normal_cards[num].children[5].style.opacity = "0%";
-        normal_cards[num].children[6].style.opacity = "0%";
-        normal_cards[num].children[7].style.opacity = "100%";
+        normal_cards[num].children[2].style.opacity = "100%";
     }
 }
 function changeNormalCard(num) {
