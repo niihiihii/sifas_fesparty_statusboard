@@ -83,16 +83,13 @@ img {
     justify-content: center;
     align-items: center;
 }
-.card > img {
-    opacity: 30%;
-}
+
 .signature {
     position: absolute;
     opacity: 0%;
 }
 .limitbreak {
     position: absolute;
-    opacity: 0%;
 }
 
 .button {
