@@ -3,7 +3,7 @@ let lastTouchEnd = 0;
 
 document.documentElement.addEventListener('touchend', function (event) {
      let now = (new Date()).getTime();
-     if (now - lastTouchEnd <= 1000) {
+     if (now - lastTouchEnd <= 300) {
           event.preventDefault(); 
         } lastTouchEnd = now; 
     }, false);
