@@ -1111,15 +1111,15 @@
                 <div class="input_body">
                     <div>
                         <label for="fes_data">fes_data:</label>
-                        <input type="text" id="fes_data" />
+                        <input type="text" onkeyup="this.value=this.value.replace(/[^0-6]/g,'');" oninput="fesDataHandleOnInput(this)" id="fes_data" />
                     </div>
                     <div>
                         <label for="party_data">party_data:</label>
-                        <input type="text" id="party_data" />
+                        <input type="text" onkeyup="this.value=this.value.replace(/[^0-6]/g,'');" oninput="partyDataHandleOnInput(this)" id="party_data" />
                     </div>
                     <div>
                         <label for="normal_data">normal_data:</label>
-                        <input type="text" id="normal_data" />
+                        <input type="text" onkeyup="this.value=this.value.replace(/[^0-6]/g,'');" oninput="normalDataHandleOnInput(this)" id="normal_data" />
                     </div>
                 </div>
                 <button class="button applyDataButton" type="button" onclick="applyData()">Apply<br>Data</button>

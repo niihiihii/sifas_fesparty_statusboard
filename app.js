@@ -1,4 +1,4 @@
-/* block 'double tap zoomin zoomout' */
+/* block 'double tap zoomin' */
 let lastTouchEnd = 0; 
 
 document.documentElement.addEventListener('touchend', function (event) {
@@ -7,7 +7,7 @@ document.documentElement.addEventListener('touchend', function (event) {
           event.preventDefault(); 
         } lastTouchEnd = now; 
     }, false);
-/* block 'double tap zoomin zoomout' */
+/* block 'double tap zoomin' */
 
 const fes_cards = document.querySelectorAll(".fes-card");
 const party_cards = document.querySelectorAll(".party-card");
@@ -130,6 +130,8 @@ for (let i = 0; i < normal_count.length; i++) {
     normal_cards[i].addEventListener("click", () => changeNormalCard(i));
 }
 
+
+/* Save Image Button */
 function downImg(){
 	html2canvas(document.querySelector(".checkerboard"),{ logging: true, letterRendering: 1, allowTaint: false,  useCORS: true }).then(function(canvas){
 		const myImage = canvas.toDataURL();
@@ -144,7 +146,41 @@ function downloadURI(url, name){
 	document.body.appendChild(link);
 	link.click();
 }
+/* Save Image Button */
 
+
+/* Input Data Button */
+const inputDataButton = document.querySelector(".inputDataButton");
+const inputDataModal = document.querySelector(".inputDataModal");
+
+inputDataButton.addEventListener("click", () => {
+    inputDataModal.showModal();
+});
+/* Input Data Button */
+
+
+/* (fes/party/normal)_count_input maxlength=(fes/party/normal)_cards.length */
+function fesDataHandleOnInput(el) {
+    if(el.value.length > fes_cards.length) {
+        el.value = el.value.substr(0, fes_cards.length);
+    }
+}
+
+function partyDataHandleOnInput(el) {
+    if(el.value.length > party_cards.length) {
+        el.value = el.value.substr(0, party_cards.length);
+    }
+}
+
+function normalDataHandleOnInput(el) {
+    if(el.value.length > normal_cards.length) {
+        el.value = el.value.substr(0, normal_cards.length);
+    }
+}
+/* (fes/party/normal)_count_input maxlength=(fes/party/normal)_cards.length */
+
+
+/* Apply Data Button */
 function applyData() {
     const fes_count_input = document.getElementById("fes_data").value;
     const party_count_input = document.getElementById("party_data").value;
@@ -180,7 +216,10 @@ function applyData() {
     inputDataModal.close();
     
 }
+/* Apply Data Button */
 
+
+/* Data Button */
 function makeData() {
     for (let i = 0; i < fes_count.length; i++) {
         fes_count[i] = fes_count[i] % 7;
@@ -198,19 +237,26 @@ function makeData() {
     return data;
 }
 
+const copyDataModal = document.querySelector(".copyDataModal");
+
+    /* Print Data on Textarea */
 function printData() {
     const data = makeData();
     const dataArea = document.querySelector(".dataArea");
     dataArea.value = data;
     copyDataModal.showModal();
 }
+    /* Print Data on Textarea */
 
 function copyData() {
     const data = makeData();
     navigator.clipboard.writeText(data);
     alert("Data Copied"); 
 }
+/* Data Button */
 
+
+/* Idolized ON/OFF Switch */
 function idolizedOn() {
     const cards = document.querySelectorAll(".card");
     for (let i = 0; i < cards.length; i++) {
@@ -236,12 +282,4 @@ function idolizedOnOff() {
 const idolizedSwitch = document.querySelector(".idolizedSwitch");
 let switch_click_count = 0;
 idolizedSwitch.addEventListener("click", idolizedOnOff);
-
-
-const copyDataModal = document.querySelector(".copyDataModal");
-const inputDataButton = document.querySelector(".inputDataButton");
-const inputDataModal = document.querySelector(".inputDataModal");
-
-inputDataButton.addEventListener("click", () => {
-    inputDataModal.showModal();
-});
+/* Idolized ON/OFF Switch */
