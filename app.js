@@ -274,18 +274,97 @@ function idolizedOff() {
 }
 
 function idolizedOnOff() {
-    switch_click_count++;
-    if (switch_click_count % 2 === 0) {
+    idolized_switch_click_count++;
+    if (idolized_switch_click_count % 2 === 0) {
         idolizedOff();
     } else {
         idolizedOn();
     }
 }
 const idolizedSwitch = document.querySelector(".idolizedSwitch");
-let switch_click_count = 0;
+let idolized_switch_click_count = 0;
 idolizedSwitch.addEventListener("click", idolizedOnOff);
 /* Idolized ON/OFF Switch */
 
-function sortByGroup() {
-    fes_cards[0].styles.order = i + 1
+function sortByGroupOn() {
+    const fes_order = [];
+    const party_order = ["17", "14", "1", "18", "28",
+                        "15", "19", "3", "20", "6",
+                        "24", "2", "27", "30", "11",
+                        "12", "25", "5", "22", "29",
+                        "13", "16", "10", "9", "8",
+                        "23", "4"];
+    const normal_order = ["3", "20", "14", "16"];
+
+    for (let i = 0; i < fes_cards.length; i++) {
+        fes_cards[i].styles.order = fes_order[i];
+    }
+    for (let i = 0; i < party_cards.length; i++) {
+        party_cards[i].styles.order = party_order[i];
+    }
+    for (let i = 0; i < normal_cards.length; i++) {
+        normal_cards[i].styles.order = normal_order[i];
+    }
+
+    const fes_icon_order = ["29", "30", "59", "60"];
+    const party_icon_order = ["7", "21", "26"]
+    const normal_icon_order = ["1", "2", "4", "5",
+                                "6", "7", "8", "9", "10",
+                                "11", "12", "13", "15",
+                                "17", "18", "19",
+                                "21", "22", "23", "24", "25",
+                                "26", "27", "28", "29", "30"]
+
+    for (let i = 0; i < fes_icon.length; i++) {
+        fes_icon[i].styles.order = fes_icon_order[i];
+    }
+    for (let i = 0; i < party_icon.length; i++) {
+        party_icon[i].styles.order = party_icon_order[i];
+    }
+    for (let i = 0; i < normal_icon.length; i++) {
+        normal_icon[i].styles.order = normal_icon_order[i];
+    }
+    icon.style.display = "flex";
+    sortByGroupSwitch.innerText = "Sort by\nGroup\n>ON";
 }
+
+function sortByGroupOff() {
+    for (let i = 0; i < fes_cards.length; i++) {
+        fes_cards[i].styles.order = "";
+    }
+    for (let i = 0; i < party_cards.length; i++) {
+        party_cards[i].styles.order = "";
+    }
+    for (let i = 0; i < normal_cards.length; i++) {
+        normal_cards[i].styles.order = "";
+    }
+    for (let i = 0; i < fes_icon.length; i++) {
+        fes_icon[i].styles.order = "";
+    }
+    for (let i = 0; i < party_icon.length; i++) {
+        party_icon[i].styles.order = "";
+    }
+    for (let i = 0; i < normal_icon.length; i++) {
+        normal_icon[i].styles.order = "";
+    }
+    icon.style.display = "none";
+    sortByGroupSwitch.innerText = "Sort by\nGroup\n>OFF";
+}
+
+function sortByGroupOnOff() {
+    sortByGroup_switch_click_count++;
+    if (sortByGroup_switch_click_count % 2 === 0) {
+        sortByGroupOff();
+    } else {
+        sortByGroupOn();
+    }
+}
+
+const sortByGroupSwitch = document.querySelector(".sortByGroupSwitch");
+let sortByGroup_switch_click_count = 0;
+sortByGroupSwitch.addEventListener("click", sortByGroupOnOff);
+
+const icon = document.querySelectorAll(".icon")
+const fes_icon = document.querySelectorAll(".fes-icon")
+const party_icon = document.querySelectorAll(".party-icon")
+const normal_icon = document.querySelectorAll(".normal-icon")
