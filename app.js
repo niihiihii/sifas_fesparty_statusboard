@@ -394,5 +394,6 @@ function sortByGroupOnOff() {
 
 const sortByGroupSwitch = document.querySelector(".sortByGroupSwitch");
 let sortByGroup_switch_click_count = 0;
+
 sortByGroupSwitch.addEventListener("click", sortByGroupOnOff);
 /* Sort by Group ON/OFF Switch */
