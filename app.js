@@ -260,16 +260,16 @@ function copyData() {
 function idolizedOn() {
     const cards = document.querySelectorAll(".card");
     for (let i = 0; i < cards.length; i++) {
-        cards[i].children[0].src = cards[i].children[0].src.replace(/_idolized|.png/g, "") + "_idolized.png"
+        cards[i].children[0].src = cards[i].children[0].src.replace(/_idolized|.png/g, "") + "_idolized.png";
     }
-    idolizedSwitch.innerText = "Idolized\nON"
+    idolizedSwitch.innerText = "Idolized\nON";
 }
 
 function idolizedOff() {
     const cards = document.querySelectorAll(".card");
     for (let i = 0; i < cards.length; i++) {
-        cards[i].children[0].src = cards[i].children[0].src.replace("_idolized", "")
-        idolizedSwitch.innerText = "Idolized\nOFF"
+        cards[i].children[0].src = cards[i].children[0].src.replace("_idolized", "");
+        idolizedSwitch.innerText = "Idolized\nOFF";
     }
 }
 
@@ -285,3 +285,7 @@ const idolizedSwitch = document.querySelector(".idolizedSwitch");
 let switch_click_count = 0;
 idolizedSwitch.addEventListener("click", idolizedOnOff);
 /* Idolized ON/OFF Switch */
+
+function sortByGroup() {
+    fes_cards[0].styles.order = i + 1
+}
