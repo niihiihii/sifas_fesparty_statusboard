@@ -155,7 +155,7 @@ img {
     height: 12vw;
     max-width: 300px;
     max-height: 75px;
-    font-size: 4.5vw;
+    font-size: 4vw;
     margin-top: 0;
 }
 
@@ -248,7 +248,7 @@ input:focus {
         font-size: 15px;
     }
     .sortByGroupSwitch {
-        font-size: 27px;
+        font-size: 25px;
     }
 }
 @media screen and (min-width: 1408px) {
