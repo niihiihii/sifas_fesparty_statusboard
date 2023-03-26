@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 body {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     margin: 0;
 }
@@ -74,7 +75,7 @@ img {
 
 }
 
-.logo {
+.icon {
     display: none;
     width: 9vw;
     height: 9vw;
@@ -84,7 +85,7 @@ img {
     align-items: center;
 }
 
-.logo > img {
+.icon > img {
     width: 7vw;
     height: 7vw;
     max-width: 100px;
@@ -142,8 +143,20 @@ img {
 
 }
 
+.buttonframe {
+    display: flex;
+    justify-content: center;
+    max-width: 1408px;
+    width: 99vw;
+}
+
 .sortByGroupSwitch {
-    font-size: 2.4vw;
+    width: 48vw;
+    height: 12vw;
+    max-width: 300px;
+    max-height: 75px;
+    font-size: 4.5vw;
+    margin: 0;
 }
 
 dialog {
@@ -235,7 +248,7 @@ input:focus {
         font-size: 15px;
     }
     .sortByGroupSwitch {
-        font-size: 15px;
+        font-size: 27px;
     }
 }
 @media screen and (min-width: 1408px) {
