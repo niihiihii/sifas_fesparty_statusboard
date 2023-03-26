@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
 body {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     margin: 0;
 }
@@ -74,6 +75,22 @@ img {
 
 }
 
+.icon {
+    display: none;
+    width: 9vw;
+    height: 9vw;
+    max-width: 128px;
+    max-height: 128px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon > img {
+    width: 7vw;
+    height: 7vw;
+    max-width: 100px;
+    max-height: 100px;
+}
 .card {
     width: 9vw;
     height: 9vw;
@@ -125,6 +142,23 @@ img {
     margin: 1vw;
 
 }
+
+.buttonframe {
+    display: flex;
+    justify-content: center;
+    max-width: 1408px;
+    width: 99vw;
+}
+
+.sortByGroupSwitch {
+    width: 48vw;
+    height: 12vw;
+    max-width: 300px;
+    max-height: 75px;
+    font-size: 4.5vw;
+    margin: 0;
+}
+
 dialog {
     background-color: #F8C8C4;
     border: 0;
@@ -212,6 +246,9 @@ input:focus {
     }
     .copyDataModalButton {
         font-size: 15px;
+    }
+    .sortByGroupSwitch {
+        font-size: 27px;
     }
 }
 @media screen and (min-width: 1408px) {
