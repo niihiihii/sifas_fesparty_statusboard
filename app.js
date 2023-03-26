@@ -262,12 +262,14 @@ function idolizedOn() {
     for (let i = 0; i < cards.length; i++) {
         cards[i].children[0].src = cards[i].children[0].src.replace(/_idolized|.png/g, "") + "_idolized.png"
     }
+    idolizedSwitch.innerText = "Idolized\nON"
 }
 
 function idolizedOff() {
     const cards = document.querySelectorAll(".card");
     for (let i = 0; i < cards.length; i++) {
         cards[i].children[0].src = cards[i].children[0].src.replace("_idolized", "")
+        idolizedSwitch.innerText = "Idolized\nOFF"
     }
 }
 
