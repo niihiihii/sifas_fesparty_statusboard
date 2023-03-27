@@ -100,10 +100,33 @@ img {
     justify-content: center;
     align-items: center;
 }
+.sample {
+    width: 15vw;
+    height: 15vw;
+    max-width: 90px;
+    max-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sampleImg {
+    width: 15vw;
+    height: 15vw;
+    max-width: 90px;
+    max-height: 90px;
+}
 
+.rainbow {
+    display: none;
+    position: absolute;
+    opacity: 0%;
+}
 .signature {
     position: absolute;
     opacity: 0%;
+}
+.sample__signature, .sample__rainbow {
+    opacity: 100%;
 }
 .limitbreak {
     position: absolute;
@@ -134,29 +157,22 @@ img {
     margin: 0;
 }
 
-.copyDataModalButton {
-    width: 12vw;
+.modalSmallButton {
+    width: 15vw;
     height: 9vw;
-    max-width: 75px;
+    max-width: 94px;
     max-height: 55px;
     margin: 1vw;
-
+    font-size: 3vw;
 }
 
-.buttonframe {
-    display: flex;
-    justify-content: center;
-    max-width: 1408px;
-    width: 99vw;
-}
-
-.sortByGroupSwitch {
-    width: 48vw;
-    height: 12vw;
-    max-width: 300px;
-    max-height: 75px;
-    font-size: 4vw;
-    margin-top: 0;
+.sortByGroupSwitch, .changeCardStyleButton {
+    width: 32vw;
+    height: 5vw;
+    max-width: 200px;
+    max-height: 30px;
+    margin: 1vw;
+    font-size: 2.5vw;
 }
 
 dialog {
@@ -244,11 +260,8 @@ input:focus {
     label {
         font-size: 16px;
     }
-    .copyDataModalButton {
-        font-size: 15px;
-    }
-    .sortByGroupSwitch {
-        font-size: 25px;
+    .modalSmallButton, .sortByGroupSwitch, .changeCardStyleButton {
+        margin: 6px;
     }
 }
 @media screen and (min-width: 1408px) {

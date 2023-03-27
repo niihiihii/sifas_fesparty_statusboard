@@ -8,7 +8,7 @@ document.documentElement.addEventListener('touchend', function (event) {
         } lastTouchEnd = now; 
     }, false);
 /* block 'double tap zoomin' */
-
+const cards = document.querySelectorAll(".card");
 const fes_cards = document.querySelectorAll(".fes-card");
 const party_cards = document.querySelectorAll(".party-card");
 const normal_cards = document.querySelectorAll(".normal-card");
@@ -35,26 +35,33 @@ const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/sifas_fespart
 
 function displayFesCard(num) {
         if (fes_count[num] % 7 === 0) {
-            fes_cards[num].children[2].children[0].src = limitbreaklink + "overlay.png";
+            fes_cards[num].children[3].children[0].src = limitbreaklink + "overlay.png";
             fes_cards[num].children[1].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "0%";
         } else if (fes_count[num] % 7 === 1) {
-            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak0.png";
+            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak0.png";
             fes_cards[num].children[1].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "0%";
         } else if (fes_count[num] % 7 === 2) {
-            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak1.png";
+            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak1.png";
             fes_cards[num].children[1].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "0%";
         } else if (fes_count[num] % 7 === 3) {
-            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak2.png";
+            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak2.png";
             fes_cards[num].children[1].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "0%";
         } else if (fes_count[num] % 7 === 4) {
-            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak3.png";
+            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak3.png";
             fes_cards[num].children[1].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "0%";
         } else if (fes_count[num] % 7 === 5) {
-            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak4.png";
+            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak4.png";
             fes_cards[num].children[1].style.opacity = "0%";
+            fes_cards[num].children[2].style.opacity = "0%";
         } else {
-            fes_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak5.png";
+            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak5.png";
             fes_cards[num].children[1].style.opacity = "100%";
+            fes_cards[num].children[2].style.opacity = "100%";
         }
 }
 function changeFesCard(num) {
@@ -64,26 +71,33 @@ function changeFesCard(num) {
 
 function displayPartyCard(num) {
     if (party_count[num] % 7 === 0) {
-        party_cards[num].children[2].children[0].src = limitbreaklink + "overlay.png";
+        party_cards[num].children[3].children[0].src = limitbreaklink + "overlay.png";
         party_cards[num].children[1].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "0%";
     } else if (party_count[num] % 7 === 1) {
-        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak0.png";
+        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak0.png";
         party_cards[num].children[1].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "0%";
     } else if (party_count[num] % 7 === 2) {
-        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak1.png";
+        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak1.png";
         party_cards[num].children[1].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "0%";
     } else if (party_count[num] % 7 === 3) {
-        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak2.png";
+        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak2.png";
         party_cards[num].children[1].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "0%";
     } else if (party_count[num] % 7 === 4) {
-        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak3.png";
+        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak3.png";
         party_cards[num].children[1].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "0%";
     } else if (party_count[num] % 7 === 5) {
-        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak4.png";
+        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak4.png";
         party_cards[num].children[1].style.opacity = "0%";
+        party_cards[num].children[2].style.opacity = "0%";
     } else {
-        party_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak5.png";
+        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak5.png";
         party_cards[num].children[1].style.opacity = "100%";
+        party_cards[num].children[2].style.opacity = "100%";
     }
 }
 function changePartyCard(num) {
@@ -93,26 +107,33 @@ function changePartyCard(num) {
 
 function displayNormalCard(num) {
     if (normal_count[num] % 7 === 0) {
-        normal_cards[num].children[2].children[0].src = limitbreaklink + "overlay.png";
+        normal_cards[num].children[3].children[0].src = limitbreaklink + "overlay.png";
         normal_cards[num].children[1].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "0%";
     } else if (normal_count[num] % 7 === 1) {
-        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak0.png";
+        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak0.png";
         normal_cards[num].children[1].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "0%";
     } else if (normal_count[num] % 7 === 2) {
-        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak1.png";
+        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak1.png";
         normal_cards[num].children[1].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "0%";
     } else if (normal_count[num] % 7 === 3) {
-        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak2.png";
+        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak2.png";
         normal_cards[num].children[1].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "0%";
     } else if (normal_count[num] % 7 === 4) {
-        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak3.png";
+        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak3.png";
         normal_cards[num].children[1].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "0%";
     } else if (normal_count[num] % 7 === 5) {
-        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak4.png";
+        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak4.png";
         normal_cards[num].children[1].style.opacity = "0%";
+        normal_cards[num].children[2].style.opacity = "0%";
     } else {
-        normal_cards[num].children[2].children[0].src = limitbreaklink + "limitbreak5.png";
+        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak5.png";
         normal_cards[num].children[1].style.opacity = "100%";
+        normal_cards[num].children[2].style.opacity = "100%";
     }
 }
 function changeNormalCard(num) {
@@ -135,17 +156,20 @@ for (let i = 0; i < normal_count.length; i++) {
 function downImg(){
 	html2canvas(document.querySelector(".checkerboard"),{ logging: true, letterRendering: 1, allowTaint: false,  useCORS: true }).then(function(canvas){
 		const myImage = canvas.toDataURL();
-		downloadURI(myImage, "image.png") 
+		downloadURL(myImage, "image.png") 
 	});
 }
 
-function downloadURI(url, name){
+function downloadURL(url, name){
 	const link = document.createElement("a")
 	link.download = name;
 	link.href = url;
 	document.body.appendChild(link);
 	link.click();
 }
+
+const downImgButton = document.querySelector(".downImgButton");
+downImgButton.addEventListener("click", downImg);
 /* Save Image Button */
 
 
@@ -258,19 +282,20 @@ function copyData() {
 
 /* Idolized ON/OFF Switch */
 function idolizedOn() {
-    const cards = document.querySelectorAll(".card");
     for (let i = 0; i < cards.length; i++) {
         cards[i].children[0].src = cards[i].children[0].src.replace(/_idolized|.png/g, "") + "_idolized.png";
     }
+    const sample = document.querySelector(".sample");
+    sample.children[0].src = sample.children[0].src.replace(/_idolized|.png/g, "") + "_idolized.png";
     idolizedSwitch.innerText = "Idolized\nON";
 }
 
 function idolizedOff() {
-    const cards = document.querySelectorAll(".card");
     for (let i = 0; i < cards.length; i++) {
         cards[i].children[0].src = cards[i].children[0].src.replace("_idolized", "");
-        idolizedSwitch.innerText = "Idolized\nOFF";
     }
+    const sample = document.querySelector(".sample");
+    sample.children[0].src = sample.children[0].src.replace("_idolized", "");
     idolizedSwitch.innerText = "Idolized\nOFF"
 }
 
@@ -397,3 +422,39 @@ let sortByGroup_switch_click_count = 0;
 
 sortByGroupSwitch.addEventListener("click", sortByGroupOnOff);
 /* Sort by Group ON/OFF Switch */
+
+const settingsModal = document.querySelector(".settingsModal");
+
+function changeCardStyle() {
+    changeCardStyleButton_click_count++;
+    if (changeCardStyleButton_click_count % 4 === 0) {
+        for (let i = 0; i < signature.length; i++) {
+            signature[i].style.display = "block";
+            rainbow[i].style.display = "none";
+        }
+        changeCardStyleButton.innerText = "Signature";
+    } else if (changeCardStyleButton_click_count % 4 === 1) {
+        for (let i = 0; i < signature.length; i++) {
+            signature[i].style.display = "none";
+            rainbow[i].style.display = "block";
+        }
+        changeCardStyleButton.innerText = "Rainbow";
+    } else if (changeCardStyleButton_click_count % 4 === 2) {
+        for (let i = 0; i < signature.length; i++) {
+            signature[i].style.display = "block";
+            rainbow[i].style.display = "block";
+        }
+        changeCardStyleButton.innerText = "Signature + Rainbow";
+    } else {
+        for (let i = 0; i < signature.length; i++) {
+            signature[i].style.display = "none";
+            rainbow[i].style.display = "none";
+        }
+        changeCardStyleButton.innerText = "none";
+    }
+}
+const signature = document.querySelectorAll(".signature");
+const rainbow = document.querySelectorAll(".rainbow");
+const changeCardStyleButton = document.querySelector(".changeCardStyleButton");
+let changeCardStyleButton_click_count = 0;
+changeCardStyleButton.addEventListener("click", changeCardStyle);
