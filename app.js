@@ -423,7 +423,11 @@ let sortByGroup_switch_click_count = 0;
 sortByGroupSwitch.addEventListener("click", sortByGroupOnOff);
 /* Sort by Group ON/OFF Switch */
 
-const settingsModal = document.querySelector(".settingsModal");
+
+
+/* Change Card Style Button */
+const signature = document.querySelectorAll(".signature");
+const rainbow = document.querySelectorAll(".rainbow");
 
 function changeCardStyle() {
     changeCardStyleButton_click_count++;
@@ -453,8 +457,12 @@ function changeCardStyle() {
         changeCardStyleButton.innerText = "none";
     }
 }
-const signature = document.querySelectorAll(".signature");
-const rainbow = document.querySelectorAll(".rainbow");
+
 const changeCardStyleButton = document.querySelector(".changeCardStyleButton");
 let changeCardStyleButton_click_count = 0;
 changeCardStyleButton.addEventListener("click", changeCardStyle);
+/* Change Card Style Button */
+
+
+
+const settingsModal = document.querySelector(".settingsModal");
