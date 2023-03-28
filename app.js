@@ -154,7 +154,7 @@ for (let i = 0; i < normal_count.length; i++) {
 
 /* Save Image Button */
 function downImg(){
-	html2canvas(document.querySelector(".checkerboard"),{ width: 1408, backgroundColor: "#180134", scale: 2, logging: true, letterRendering: 1, allowTaint: false,  useCORS: true }).then(function(canvas){
+	html2canvas(document.querySelector(".checkerboard"),{ backgroundColor: "#180134", scale: 2, logging: true, letterRendering: 1, allowTaint: false,  useCORS: true }).then(function(canvas){
 		const myImage = canvas.toDataURL();
 		downloadURL(myImage, "image.png") 
 	});
