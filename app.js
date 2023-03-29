@@ -8,6 +8,7 @@ document.documentElement.addEventListener('touchend', function (event) {
         } lastTouchEnd = now; 
     }, false);
 /* block 'double tap zoomin' */
+
 const cards = document.querySelectorAll(".card");
 const fes_cards = document.querySelectorAll(".fes-card");
 const party_cards = document.querySelectorAll(".party-card");
@@ -184,7 +185,7 @@ inputDataButton.addEventListener("click", () => {
 /* Input Data Button */
 
 
-/* (fes/party/normal)_count_input maxlength=(fes/party/normal)_cards.length */
+/* (fes/party/normal)_count_input maxlength<=(fes/party/normal)_cards.length */
 function fesDataHandleOnInput(el) {
     if(el.value.length > fes_cards.length) {
         el.value = el.value.substr(0, fes_cards.length);
@@ -202,7 +203,7 @@ function normalDataHandleOnInput(el) {
         el.value = el.value.substr(0, normal_cards.length);
     }
 }
-/* (fes/party/normal)_count_input maxlength=(fes/party/normal)_cards.length */
+/* (fes/party/normal)_count_input maxlength<=(fes/party/normal)_cards.length */
 
 
 /* Apply Data Button */
