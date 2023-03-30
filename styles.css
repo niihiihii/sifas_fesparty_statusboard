@@ -76,7 +76,7 @@ img {
 }
 
 .icon {
-    display: none;
+    display: flex;
     width: 9vw;
     height: 9vw;
     max-width: 128px;
@@ -117,13 +117,10 @@ img {
 }
 
 .rainbow {
-    display: none;
     position: absolute;
-    opacity: 0%;
 }
 .signature {
     position: absolute;
-    opacity: 0%;
 }
 .sample__signature, .sample__rainbow {
     opacity: 100%;
@@ -250,6 +247,14 @@ input:focus {
 
 .dataArea::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera 스크롤바 없애기*/
+}
+
+.invisible {
+    opacity: 0%;
+}
+
+.displayNone {
+    display: none;
 }
 
 @media screen and (min-width: 625px) {

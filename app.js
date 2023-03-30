@@ -37,32 +37,32 @@ const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/sifas_fespart
 function displayFesCard(num) {
         if (fes_count[num] % 7 === 0) {
             fes_cards[num].children[3].children[0].src = limitbreaklink + "overlay.png";
-            fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
+            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[2].classList.add("invisible");
         } else if (fes_count[num] % 7 === 1) {
             fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak0.png";
-            fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
+            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[2].classList.add("invisible");
         } else if (fes_count[num] % 7 === 2) {
             fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak1.png";
-            fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
+            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[2].classList.add("invisible");
         } else if (fes_count[num] % 7 === 3) {
             fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak2.png";
-            fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
+            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[2].classList.add("invisible");
         } else if (fes_count[num] % 7 === 4) {
             fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak3.png";
-            fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
+            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[2].classList.add("invisible");
         } else if (fes_count[num] % 7 === 5) {
             fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak4.png";
-            fes_cards[num].children[1].style.opacity = "0%";
-            fes_cards[num].children[2].style.opacity = "0%";
+            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[2].classList.add("invisible");
         } else {
             fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak5.png";
-            fes_cards[num].children[1].style.opacity = "100%";
-            fes_cards[num].children[2].style.opacity = "100%";
+            fes_cards[num].children[1].classList.remove("invisible");
+            fes_cards[num].children[2].classList.remove("invisible");
         }
 }
 function changeFesCard(num) {
@@ -73,32 +73,32 @@ function changeFesCard(num) {
 function displayPartyCard(num) {
     if (party_count[num] % 7 === 0) {
         party_cards[num].children[3].children[0].src = limitbreaklink + "overlay.png";
-        party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
+        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[2].classList.add("invisible");
     } else if (party_count[num] % 7 === 1) {
         party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak0.png";
-        party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
+        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[2].classList.add("invisible");
     } else if (party_count[num] % 7 === 2) {
         party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak1.png";
-        party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
+        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[2].classList.add("invisible");
     } else if (party_count[num] % 7 === 3) {
         party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak2.png";
-        party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
+        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[2].classList.add("invisible");
     } else if (party_count[num] % 7 === 4) {
         party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak3.png";
-        party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
+        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[2].classList.add("invisible");
     } else if (party_count[num] % 7 === 5) {
         party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak4.png";
-        party_cards[num].children[1].style.opacity = "0%";
-        party_cards[num].children[2].style.opacity = "0%";
+        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[2].classList.add("invisible");
     } else {
         party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak5.png";
-        party_cards[num].children[1].style.opacity = "100%";
-        party_cards[num].children[2].style.opacity = "100%";
+        party_cards[num].children[1].classList.remove("invisible");
+        party_cards[num].children[2].classList.remove("invisible");
     }
 }
 function changePartyCard(num) {
@@ -109,32 +109,32 @@ function changePartyCard(num) {
 function displayNormalCard(num) {
     if (normal_count[num] % 7 === 0) {
         normal_cards[num].children[3].children[0].src = limitbreaklink + "overlay.png";
-        normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
+        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[2].classList.add("invisible");
     } else if (normal_count[num] % 7 === 1) {
         normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak0.png";
-        normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
+        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[2].classList.add("invisible");
     } else if (normal_count[num] % 7 === 2) {
         normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak1.png";
-        normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
+        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[2].classList.add("invisible");
     } else if (normal_count[num] % 7 === 3) {
         normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak2.png";
-        normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
+        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[2].classList.add("invisible");
     } else if (normal_count[num] % 7 === 4) {
         normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak3.png";
-        normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
+        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[2].classList.add("invisible");
     } else if (normal_count[num] % 7 === 5) {
         normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak4.png";
-        normal_cards[num].children[1].style.opacity = "0%";
-        normal_cards[num].children[2].style.opacity = "0%";
+        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[2].classList.add("invisible");
     } else {
         normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak5.png";
-        normal_cards[num].children[1].style.opacity = "100%";
-        normal_cards[num].children[2].style.opacity = "100%";
+        normal_cards[num].children[1].classList.remove("invisible");
+        normal_cards[num].children[2].classList.remove("invisible");
     }
 }
 function changeNormalCard(num) {
@@ -372,15 +372,15 @@ function sortByGroupOn() {
 
     for (let i = 0; i < fes_icon.length; i++) {
         fes_icon[i].style.order = fes_icon_order[i];
-        fes_icon[i].style.display = "flex";
+        fes_icon[i].classList.remove("displayNone");
     }
     for (let i = 0; i < party_icon.length; i++) {
         party_icon[i].style.order = party_icon_order[i];
-        party_icon[i].style.display = "flex";
+        party_icon[i].classList.remove("displayNone");
     }
     for (let i = 0; i < normal_icon.length; i++) {
         normal_icon[i].style.order = normal_icon_order[i];
-        normal_icon[i].style.display = "flex";
+        normal_icon[i].classList.remove("displayNone");
     }
     sortByGroupSwitch.innerText = "Sort by Group ON";
 }
@@ -397,15 +397,15 @@ function sortByGroupOff() {
     }
     for (let i = 0; i < fes_icon.length; i++) {
         fes_icon[i].style.order = "";
-        fes_icon[i].style.display = "none";
+        fes_icon[i].classList.add("displayNone");
     }
     for (let i = 0; i < party_icon.length; i++) {
         party_icon[i].style.order = "";
-        party_icon[i].style.display = "none";
+        party_icon[i].classList.add("displayNone");
     }
     for (let i = 0; i < normal_icon.length; i++) {
         normal_icon[i].style.order = "";
-        normal_icon[i].style.display = "none";
+        normal_icon[i].classList.add("displayNone");
     }
     sortByGroupSwitch.innerText = "Sort by Group OFF";
 }
@@ -435,26 +435,26 @@ function changeCardStyle() {
     changeCardStyleButton_click_count++;
     if (changeCardStyleButton_click_count % 4 === 0) {
         for (let i = 0; i < signature.length; i++) {
-            signature[i].style.display = "block";
-            rainbow[i].style.display = "none";
+            signature[i].classList.remove("displayNone");
+            rainbow[i].classList.add("displayNone");
         }
         changeCardStyleButton.innerText = "Signature";
     } else if (changeCardStyleButton_click_count % 4 === 1) {
         for (let i = 0; i < signature.length; i++) {
-            signature[i].style.display = "none";
-            rainbow[i].style.display = "block";
+            signature[i].classList.add("displayNone");
+            rainbow[i].classList.remove("displayNone");
         }
         changeCardStyleButton.innerText = "Rainbow";
     } else if (changeCardStyleButton_click_count % 4 === 2) {
         for (let i = 0; i < signature.length; i++) {
-            signature[i].style.display = "block";
-            rainbow[i].style.display = "block";
+            signature[i].classList.remove("displayNone");
+            rainbow[i].classList.remove("displayNone");
         }
         changeCardStyleButton.innerText = "Signature + Rainbow";
     } else {
         for (let i = 0; i < signature.length; i++) {
-            signature[i].style.display = "none";
-            rainbow[i].style.display = "none";
+            signature[i].classList.add("displayNone");
+            rainbow[i].classList.add("displayNone");
         }
         changeCardStyleButton.innerText = "none";
     }
