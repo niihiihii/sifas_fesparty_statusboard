@@ -242,6 +242,9 @@ function applyData() {
     inputDataModal.close();
     
 }
+
+const applyDataButton = document.querySelector(".applyDataButton");
+applyDataButton.addEventListener("click", applyData);
 /* Apply Data Button */
 
 
@@ -272,6 +275,9 @@ function printData() {
     dataArea.value = data;
     copyDataModal.showModal();
 }
+
+const printDataButton = document.querySelector(".printDataButton");
+printDataButton.addEventListener("click", printData);
     /* Print Data on Textarea */
 
 function copyData() {
@@ -279,6 +285,14 @@ function copyData() {
     navigator.clipboard.writeText(data);
     alert("Data Copied"); 
 }
+
+const copyDataButton = document.querySelector(".copyDataButton");
+copyDataButton.addEventListener("click", copyData);
+
+const copyDataModalCloseButton = document.querySelector(".copyDataModalCloseButton");
+copyDataModalCloseButton.addEventListener("click", () => {
+    copyDataModal.close()
+});
 /* Data Button */
 
 
@@ -416,3 +430,12 @@ changeCardStyleButton.addEventListener("click", changeCardStyle);
 
 
 const settingsModal = document.querySelector(".settingsModal");
+const settingsButton = document.querySelector(" .settingsButton");
+settingsButton.addEventListener("click", () => {
+    settingsModal.showModal()
+});
+
+const settingsModalCloseButton = document.querySelector(".settingsModalCloseButton");
+settingsModalCloseButton.addEventListener("click", () => {
+    settingsModal.close()
+});

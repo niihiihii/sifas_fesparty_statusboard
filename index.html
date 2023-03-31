@@ -1590,18 +1590,18 @@
                         <input type="text" onkeyup="this.value=this.value.replace(/[^0-6]/g,'');" oninput="normalDataHandleOnInput(this)" id="normal_data" />
                     </div>
                 </div>
-                <button class="button applyDataButton" type="button" onclick="applyData()">Apply<br>Data</button>
+                <button class="button applyDataButton" type="button">Apply<br>Data</button>
             </div>
         </dialog>
-        <button class="button printDataButton" type="button" onclick="printData()">Copy<br>Data</button>
+        <button class="button printDataButton" type="button">Copy<br>Data</button>
         <dialog class="copyDataModal">
             <div class="modal_body">
                 <textarea class="dataArea" spellcheck="false"></textarea>
-                <button class="button modalSmallButton copyDataButton" type="button" onclick="copyData()">Copy<br>Data</button>
-                <button class="button modalSmallButton closeButton" type="button" onclick="copyDataModal.close();">Close</button>
+                <button class="button modalSmallButton copyDataButton" type="button">Copy<br>Data</button>
+                <button class="button modalSmallButton copyDataModalCloseButton" type="button">Close</button>
             </div>
         </dialog>
-        <button class="button settingsButton" type="button" onclick="settingsModal.showModal();">Settings</button>
+        <button class="button settingsButton" type="button">Settings</button>
         <dialog class="settingsModal">
             <div class="modal_body settings_modal_body">
                 <div class="sample">
@@ -1619,7 +1619,7 @@
                 <button class="button changeCardStyleButton" type="button">Signature</button>
                 <button class="button sortByGroupSwitch" type="button">Sort by Group OFF</button>
                 <button class="button modalSmallButton idolizedSwitch" type="button">Idolized<br>OFF</button>
-                <button class="button modalSmallButton closeButton" type="button" onclick="settingsModal.close();">Close</button>
+                <button class="button modalSmallButton settingsModalCloseButton" type="button">Close</button>
             </div>
         </dialog>
     </div>
