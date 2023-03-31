@@ -99,6 +99,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .sample {
     width: 15vw;
@@ -108,6 +109,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .sampleImg {
     width: 15vw;
@@ -115,16 +117,19 @@ img {
     max-width: 90px;
     max-height: 90px;
 }
-
+.unidolized {
+    position: absolute;
+}
+.idolized {
+    position: absolute;
+}
 .rainbow {
     position: absolute;
 }
 .signature {
     position: absolute;
 }
-.sample__signature, .sample__rainbow {
-    opacity: 100%;
-}
+
 .limitbreak {
     position: absolute;
 }

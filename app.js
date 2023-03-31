@@ -9,7 +9,6 @@ document.documentElement.addEventListener('touchend', function (event) {
     }, false);
 /* block 'double tap zoomin' */
 
-const cards = document.querySelectorAll(".card");
 const fes_cards = document.querySelectorAll(".fes-card");
 const party_cards = document.querySelectorAll(".party-card");
 const normal_cards = document.querySelectorAll(".normal-card");
@@ -36,33 +35,33 @@ const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/sifas_fespart
 
 function displayFesCard(num) {
         if (fes_count[num] % 7 === 0) {
-            fes_cards[num].children[3].children[0].src = limitbreaklink + "overlay.png";
-            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[4].children[0].src = limitbreaklink + "overlay.png";
             fes_cards[num].children[2].classList.add("invisible");
+            fes_cards[num].children[3].classList.add("invisible");
         } else if (fes_count[num] % 7 === 1) {
-            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak0.png";
-            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak0.png";
             fes_cards[num].children[2].classList.add("invisible");
+            fes_cards[num].children[3].classList.add("invisible");
         } else if (fes_count[num] % 7 === 2) {
-            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak1.png";
-            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak1.png";
             fes_cards[num].children[2].classList.add("invisible");
+            fes_cards[num].children[3].classList.add("invisible");
         } else if (fes_count[num] % 7 === 3) {
-            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak2.png";
-            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak2.png";
             fes_cards[num].children[2].classList.add("invisible");
+            fes_cards[num].children[3].classList.add("invisible");
         } else if (fes_count[num] % 7 === 4) {
-            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak3.png";
-            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak3.png";
             fes_cards[num].children[2].classList.add("invisible");
+            fes_cards[num].children[3].classList.add("invisible");
         } else if (fes_count[num] % 7 === 5) {
-            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak4.png";
-            fes_cards[num].children[1].classList.add("invisible");
+            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak4.png";
             fes_cards[num].children[2].classList.add("invisible");
+            fes_cards[num].children[3].classList.add("invisible");
         } else {
-            fes_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak5.png";
-            fes_cards[num].children[1].classList.remove("invisible");
+            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak5.png";
             fes_cards[num].children[2].classList.remove("invisible");
+            fes_cards[num].children[3].classList.remove("invisible");
         }
 }
 function changeFesCard(num) {
@@ -72,33 +71,33 @@ function changeFesCard(num) {
 
 function displayPartyCard(num) {
     if (party_count[num] % 7 === 0) {
-        party_cards[num].children[3].children[0].src = limitbreaklink + "overlay.png";
-        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[4].children[0].src = limitbreaklink + "overlay.png";
         party_cards[num].children[2].classList.add("invisible");
+        party_cards[num].children[3].classList.add("invisible");
     } else if (party_count[num] % 7 === 1) {
-        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak0.png";
-        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak0.png";
         party_cards[num].children[2].classList.add("invisible");
+        party_cards[num].children[3].classList.add("invisible");
     } else if (party_count[num] % 7 === 2) {
-        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak1.png";
-        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak1.png";
         party_cards[num].children[2].classList.add("invisible");
+        party_cards[num].children[3].classList.add("invisible");
     } else if (party_count[num] % 7 === 3) {
-        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak2.png";
-        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak2.png";
         party_cards[num].children[2].classList.add("invisible");
+        party_cards[num].children[3].classList.add("invisible");
     } else if (party_count[num] % 7 === 4) {
-        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak3.png";
-        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak3.png";
         party_cards[num].children[2].classList.add("invisible");
+        party_cards[num].children[3].classList.add("invisible");
     } else if (party_count[num] % 7 === 5) {
-        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak4.png";
-        party_cards[num].children[1].classList.add("invisible");
+        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak4.png";
         party_cards[num].children[2].classList.add("invisible");
+        party_cards[num].children[3].classList.add("invisible");
     } else {
-        party_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak5.png";
-        party_cards[num].children[1].classList.remove("invisible");
+        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak5.png";
         party_cards[num].children[2].classList.remove("invisible");
+        party_cards[num].children[3].classList.remove("invisible");
     }
 }
 function changePartyCard(num) {
@@ -108,33 +107,33 @@ function changePartyCard(num) {
 
 function displayNormalCard(num) {
     if (normal_count[num] % 7 === 0) {
-        normal_cards[num].children[3].children[0].src = limitbreaklink + "overlay.png";
-        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[4].children[0].src = limitbreaklink + "overlay.png";
         normal_cards[num].children[2].classList.add("invisible");
+        normal_cards[num].children[3].classList.add("invisible");
     } else if (normal_count[num] % 7 === 1) {
-        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak0.png";
-        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak0.png";
         normal_cards[num].children[2].classList.add("invisible");
+        normal_cards[num].children[3].classList.add("invisible");
     } else if (normal_count[num] % 7 === 2) {
-        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak1.png";
-        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak1.png";
         normal_cards[num].children[2].classList.add("invisible");
+        normal_cards[num].children[3].classList.add("invisible");
     } else if (normal_count[num] % 7 === 3) {
-        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak2.png";
-        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak2.png";
         normal_cards[num].children[2].classList.add("invisible");
+        normal_cards[num].children[3].classList.add("invisible");
     } else if (normal_count[num] % 7 === 4) {
-        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak3.png";
-        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak3.png";
         normal_cards[num].children[2].classList.add("invisible");
+        normal_cards[num].children[3].classList.add("invisible");
     } else if (normal_count[num] % 7 === 5) {
-        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak4.png";
-        normal_cards[num].children[1].classList.add("invisible");
+        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak4.png";
         normal_cards[num].children[2].classList.add("invisible");
+        normal_cards[num].children[3].classList.add("invisible");
     } else {
-        normal_cards[num].children[3].children[0].src = limitbreaklink + "limitbreak5.png";
-        normal_cards[num].children[1].classList.remove("invisible");
+        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak5.png";
         normal_cards[num].children[2].classList.remove("invisible");
+        normal_cards[num].children[3].classList.remove("invisible");
     }
 }
 function changeNormalCard(num) {
@@ -297,34 +296,22 @@ copyDataModalCloseButton.addEventListener("click", () => {
 
 
 /* Idolized ON/OFF Switch */
-function idolizedOn() {
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].children[0].src = cards[i].children[0].src.replace(/_idolized|.png/g, "") + "_idolized.png";
-    }
-    const sample = document.querySelector(".sample");
-    sample.children[0].src = sample.children[0].src.replace(/_idolized|.png/g, "") + "_idolized.png";
-    idolizedSwitch.innerText = "Idolized\nON";
-}
-
-function idolizedOff() {
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].children[0].src = cards[i].children[0].src.replace("_idolized", "");
-    }
-    const sample = document.querySelector(".sample");
-    sample.children[0].src = sample.children[0].src.replace("_idolized", "");
-    idolizedSwitch.innerText = "Idolized\nOFF"
-}
-
 function idolizedOnOff() {
-    idolized_switch_click_count++;
-    if (idolized_switch_click_count % 2 === 0) {
-        idolizedOff();
+    const unidolizedList = document.querySelectorAll(".unidolized");
+    const idolizedList = document.querySelectorAll(".idolized");
+    [].forEach.call(unidolizedList, function(unidolized) {
+        unidolized.classList.toggle("displayNone");
+    });
+    [].forEach.call(idolizedList, function(idolized) {
+        idolized.classList.toggle("displayNone");
+    });
+    if (unidolizedList[0].classList.contains("displayNone")) {
+        idolizedSwitch.innerText = "Idolized\nON";
     } else {
-        idolizedOn();
-    }
+        idolizedSwitch.innerText = "Idolized\nOFF"
+    }  
 }
 const idolizedSwitch = document.querySelector(".idolizedSwitch");
-let idolized_switch_click_count = 0;
 idolizedSwitch.addEventListener("click", idolizedOnOff);
 /* Idolized ON/OFF Switch */
 
