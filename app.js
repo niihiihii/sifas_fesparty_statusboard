@@ -362,18 +362,18 @@ function sortByGroupOnOff() {
                         "mia",
                         "lanzhu"];
     
-    for (let i = 0; i < orderList.length; i++) {
-        let schoolidol = orderList[i];
+    orderList.forEach(function(order) {
+        let schoolidol = order;
         let idol_cards = document.querySelectorAll("." + schoolidol);
-        for (let i = 0; i < idol_cards.length; i++) {
-            idol_cards[i].classList.toggle(schoolidol + "__order");
-        }
-    }
+        [].forEach.call(idol_cards, function(idol_card) {
+            idol_card.classList.toggle(schoolidol + "__order");
+        });
+    });
 
-    const icon = document.querySelectorAll(".icon");
-    for (let i = 0; i < icon.length; i++) {
-        icon[i].classList.toggle("displayNone");
-    }
+    const icons = document.querySelectorAll(".icon");
+    [].forEach.call(icons, function(icon) {
+        icon.classList.toggle("displayNone");
+    });
 
     if (fes_cards[0].classList.contains("maki__order")) {
         sortByGroupSwitch.innerText = "Sort by Group ON";
@@ -428,7 +428,7 @@ changeCardStyleButton.addEventListener("click", changeCardStyle);
 /* Change Card Style Button */
 
 
-
+/* Setting Button */
 const settingsModal = document.querySelector(".settingsModal");
 const settingsButton = document.querySelector(" .settingsButton");
 settingsButton.addEventListener("click", () => {
@@ -439,3 +439,4 @@ const settingsModalCloseButton = document.querySelector(".settingsModalCloseButt
 settingsModalCloseButton.addEventListener("click", () => {
     settingsModal.close()
 });
+/* Setting Button */
