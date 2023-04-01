@@ -349,8 +349,7 @@ function sortByGroupOnOff() {
                         "mia",
                         "lanzhu"];
     
-    orderList.forEach(function(order) {
-        let schoolidol = order;
+    orderList.forEach(function(schoolidol) {
         let idol_cards = document.querySelectorAll("." + schoolidol);
         [].forEach.call(idol_cards, function(idol_card) {
             idol_card.classList.toggle(schoolidol + "__order");
@@ -415,7 +414,7 @@ changeCardStyleButton.addEventListener("click", changeCardStyle);
 /* Change Card Style Button */
 
 
-/* Setting Button */
+/* Settings Button */
 const settingsModal = document.querySelector(".settingsModal");
 const settingsButton = document.querySelector(" .settingsButton");
 settingsButton.addEventListener("click", () => {
@@ -426,4 +425,4 @@ const settingsModalCloseButton = document.querySelector(".settingsModalCloseButt
 settingsModalCloseButton.addEventListener("click", () => {
     settingsModal.close()
 });
-/* Setting Button */
+/* Settings Button */
