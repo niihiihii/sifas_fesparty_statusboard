@@ -76,7 +76,7 @@ img {
 }
 
 .icon {
-    display: none;
+    display: flex;
     width: 9vw;
     height: 9vw;
     max-width: 128px;
@@ -99,6 +99,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .sample {
     width: 15vw;
@@ -108,6 +109,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .sampleImg {
     width: 15vw;
@@ -115,19 +117,19 @@ img {
     max-width: 90px;
     max-height: 90px;
 }
-
-.rainbow {
-    display: none;
+.unidolized {
     position: absolute;
-    opacity: 0%;
+}
+.idolized {
+    position: absolute;
+}
+.rainbow {
+    position: absolute;
 }
 .signature {
     position: absolute;
-    opacity: 0%;
 }
-.sample__signature, .sample__rainbow {
-    opacity: 100%;
-}
+
 .limitbreak {
     position: absolute;
 }
@@ -250,6 +252,105 @@ input:focus {
 
 .dataArea::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera 스크롤바 없애기*/
+}
+
+.invisible {
+    opacity: 0%;
+}
+
+.displayNone {
+    display: none;
+}
+
+.honoka__order {
+    order: 1;
+}
+.eli__order {
+    order: 2;
+}
+.kotori__order {
+    order: 3;
+}
+.chika__order {
+    order: 4;
+}
+.riko__order {
+    order: 5;
+}
+.kanan__order {
+    order: 6;
+}
+.ayumu__order {
+    order: 7;
+}
+.kasumi__order {
+    order: 8;
+}
+.shizuku__order {
+    order: 9;
+}
+.karin__order {
+    order: 10;
+}
+.umi__order {
+    order: 11;
+}
+.rin__order {
+    order: 12;
+}
+.maki__order {
+    order: 13;
+}
+.dia__order {
+    order: 14;
+}
+.you__order {
+    order: 15;
+}
+.yoshiko__order {
+    order: 16;
+}
+.ai__order {
+    order: 17;
+}
+.kanata__order {
+    order: 18;
+}
+.setsuna__order {
+    order: 19;
+}
+.emma__order {
+    order: 20;
+}
+.nozomi__order {
+    order: 21;
+}
+.hanayo__order {
+    order: 22;
+}
+.nico__order {
+    order: 23;
+}
+.hanamaru__order {
+    order: 24;
+}
+.mari__order {
+    order: 25;
+}
+.ruby__order {
+    order: 26;
+}
+.rina__order {
+    order: 27;
+}
+.shioriko__order {
+    order: 28;
+}
+.mia__order {
+    order: 29;
+}
+.lanzhu__order {
+    order: 30;
 }
 
 @media screen and (min-width: 625px) {
