@@ -31,124 +31,51 @@ for (let i = 0; i < normal_cards.length; i++) {
     normal_count.push(0);
 }
 
-const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/limitbreak/";
-
-function displayFesCard(num) {
-        if (fes_count[num] % 7 === 0) {
-            fes_cards[num].children[4].children[0].src = limitbreaklink + "overlay.png";
-            fes_cards[num].children[2].classList.add("invisible");
-            fes_cards[num].children[3].classList.add("invisible");
-        } else if (fes_count[num] % 7 === 1) {
-            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak0.png";
-            fes_cards[num].children[2].classList.add("invisible");
-            fes_cards[num].children[3].classList.add("invisible");
-        } else if (fes_count[num] % 7 === 2) {
-            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak1.png";
-            fes_cards[num].children[2].classList.add("invisible");
-            fes_cards[num].children[3].classList.add("invisible");
-        } else if (fes_count[num] % 7 === 3) {
-            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak2.png";
-            fes_cards[num].children[2].classList.add("invisible");
-            fes_cards[num].children[3].classList.add("invisible");
-        } else if (fes_count[num] % 7 === 4) {
-            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak3.png";
-            fes_cards[num].children[2].classList.add("invisible");
-            fes_cards[num].children[3].classList.add("invisible");
-        } else if (fes_count[num] % 7 === 5) {
-            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak4.png";
-            fes_cards[num].children[2].classList.add("invisible");
-            fes_cards[num].children[3].classList.add("invisible");
-        } else {
-            fes_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak5.png";
-            fes_cards[num].children[2].classList.remove("invisible");
-            fes_cards[num].children[3].classList.remove("invisible");
-        }
-}
-function changeFesCard(num) {
-    fes_count[num]++;
-    displayFesCard(num);
-}
-
-function displayPartyCard(num) {
-    if (party_count[num] % 7 === 0) {
-        party_cards[num].children[4].children[0].src = limitbreaklink + "overlay.png";
-        party_cards[num].children[2].classList.add("invisible");
-        party_cards[num].children[3].classList.add("invisible");
-    } else if (party_count[num] % 7 === 1) {
-        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak0.png";
-        party_cards[num].children[2].classList.add("invisible");
-        party_cards[num].children[3].classList.add("invisible");
-    } else if (party_count[num] % 7 === 2) {
-        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak1.png";
-        party_cards[num].children[2].classList.add("invisible");
-        party_cards[num].children[3].classList.add("invisible");
-    } else if (party_count[num] % 7 === 3) {
-        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak2.png";
-        party_cards[num].children[2].classList.add("invisible");
-        party_cards[num].children[3].classList.add("invisible");
-    } else if (party_count[num] % 7 === 4) {
-        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak3.png";
-        party_cards[num].children[2].classList.add("invisible");
-        party_cards[num].children[3].classList.add("invisible");
-    } else if (party_count[num] % 7 === 5) {
-        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak4.png";
-        party_cards[num].children[2].classList.add("invisible");
-        party_cards[num].children[3].classList.add("invisible");
+function displayCard(cards, count, num) {
+    const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/limitbreak/";
+    if (count[num] % 7 === 0) {
+        cards[num].children[4].children[0].src = limitbreaklink + "overlay.png";
+        cards[num].children[2].classList.add("invisible");
+        cards[num].children[3].classList.add("invisible");
+    } else if (count[num] % 7 === 1) {
+        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak0.png";
+        cards[num].children[2].classList.add("invisible");
+        cards[num].children[3].classList.add("invisible");
+    } else if (count[num] % 7 === 2) {
+        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak1.png";
+        cards[num].children[2].classList.add("invisible");
+        cards[num].children[3].classList.add("invisible");
+    } else if (count[num] % 7 === 3) {
+        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak2.png";
+        cards[num].children[2].classList.add("invisible");
+        cards[num].children[3].classList.add("invisible");
+    } else if (count[num] % 7 === 4) {
+        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak3.png";
+        cards[num].children[2].classList.add("invisible");
+        cards[num].children[3].classList.add("invisible");
+    } else if (count[num] % 7 === 5) {
+        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak4.png";
+        cards[num].children[2].classList.add("invisible");
+        cards[num].children[3].classList.add("invisible");
     } else {
-        party_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak5.png";
-        party_cards[num].children[2].classList.remove("invisible");
-        party_cards[num].children[3].classList.remove("invisible");
+        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak5.png";
+        cards[num].children[2].classList.remove("invisible");
+        cards[num].children[3].classList.remove("invisible");
     }
 }
-function changePartyCard(num) {
-    party_count[num]++;
-    displayPartyCard(num);
-}
-
-function displayNormalCard(num) {
-    if (normal_count[num] % 7 === 0) {
-        normal_cards[num].children[4].children[0].src = limitbreaklink + "overlay.png";
-        normal_cards[num].children[2].classList.add("invisible");
-        normal_cards[num].children[3].classList.add("invisible");
-    } else if (normal_count[num] % 7 === 1) {
-        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak0.png";
-        normal_cards[num].children[2].classList.add("invisible");
-        normal_cards[num].children[3].classList.add("invisible");
-    } else if (normal_count[num] % 7 === 2) {
-        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak1.png";
-        normal_cards[num].children[2].classList.add("invisible");
-        normal_cards[num].children[3].classList.add("invisible");
-    } else if (normal_count[num] % 7 === 3) {
-        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak2.png";
-        normal_cards[num].children[2].classList.add("invisible");
-        normal_cards[num].children[3].classList.add("invisible");
-    } else if (normal_count[num] % 7 === 4) {
-        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak3.png";
-        normal_cards[num].children[2].classList.add("invisible");
-        normal_cards[num].children[3].classList.add("invisible");
-    } else if (normal_count[num] % 7 === 5) {
-        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak4.png";
-        normal_cards[num].children[2].classList.add("invisible");
-        normal_cards[num].children[3].classList.add("invisible");
-    } else {
-        normal_cards[num].children[4].children[0].src = limitbreaklink + "limitbreak5.png";
-        normal_cards[num].children[2].classList.remove("invisible");
-        normal_cards[num].children[3].classList.remove("invisible");
-    }
-}
-function changeNormalCard(num) {
-    normal_count[num]++;
-    displayNormalCard(num);
+function changeCard(cards, count, num) {
+    count[num]++;
+    displayCard(cards, count, num);
 }
 
 for (let i = 0; i < fes_count.length; i++) {
-    fes_cards[i].addEventListener("click", () => changeFesCard(i));
+    fes_cards[i].addEventListener("click", () => changeCard(fes_cards, fes_count ,i));
 }
 for (let i = 0; i < party_count.length; i++) {
-    party_cards[i].addEventListener("click", () => changePartyCard(i));
+    party_cards[i].addEventListener("click", () => changeCard(party_cards, party_count, i));
 }
 for (let i = 0; i < normal_count.length; i++) {
-    normal_cards[i].addEventListener("click", () => changeNormalCard(i));
+    normal_cards[i].addEventListener("click", () => changeCard(normal_cards, normal_count, i));
 }
 
 
@@ -229,13 +156,13 @@ function applyData() {
     }
 
     for (let i = 0; i < fes_count.length; i++) {
-        displayFesCard(i);
+        displayCard(fes_cards, fes_count ,i);
     }
     for (let i = 0; i < party_count.length; i++) {
-        displayPartyCard(i);
+        displayCard(party_cards, party_count ,i);
     }
     for (let i = 0; i < normal_count.length; i++) {
-        displayNormalCard(i);
+        displayCard(normal_cards, normal_count ,i);
     }
 
     inputDataModal.close();
