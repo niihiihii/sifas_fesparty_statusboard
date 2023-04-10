@@ -112,23 +112,30 @@ inputDataButton.addEventListener("click", () => {
 
 
 /* (fes/party/normal)_count_input maxlength<=(fes/party/normal)_cards.length */
-function fesDataHandleOnInput(el) {
-    if(el.value.length > fes_cards.length) {
-        el.value = el.value.substr(0, fes_cards.length);
+function DataHandleOnInput(el, cards) {
+    if(el.value.length > cards.length) {
+        el.value = el.value.substr(0, cards.length);
     }
 }
 
-function partyDataHandleOnInput(el) {
-    if(el.value.length > party_cards.length) {
-        el.value = el.value.substr(0, party_cards.length);
-    }
-}
+const fesDataInput = document.querySelector("#fes_data");
+const partyDataInput = document.querySelector("#party_data");
+const normalDataInput = document.querySelector("#normal_data");
 
-function normalDataHandleOnInput(el) {
-    if(el.value.length > normal_cards.length) {
-        el.value = el.value.substr(0, normal_cards.length);
-    }
-}
+fesDataInput.addEventListener("keyup", () => {
+    fesDataInput.value = fesDataInput.value.replace(/[^0-6]/g,'');
+});
+fesDataInput.addEventListener("input", () => DataHandleOnInput(fesDataInput, fes_cards));
+
+partyDataInput.addEventListener("keyup", () => {
+    partyDataInput.value = partyDataInput.value.replace(/[^0-6]/g,'');
+});
+partyDataInput.addEventListener("input", () => DataHandleOnInput(partyDataInput, party_cards));
+
+normalDataInput.addEventListener("keyup", () => {
+    normalDataInput.value = normalDataInput.value.replace(/[^0-6]/g,'');
+});
+normalDataInput.addEventListener("input", () => DataHandleOnInput(normalDataInput, normal_cards));
 /* (fes/party/normal)_count_input maxlength<=(fes/party/normal)_cards.length */
 
 
