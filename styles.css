@@ -250,6 +250,21 @@ input:focus {
     display: none; /* Chrome, Safari, Opera 스크롤바 없애기*/
 }
 
+.profile {
+    display: flex;
+    justify-content: center;
+    max-width: 1408px;
+    width: 99vw;
+}
+
+.profile > a > img {
+    width: 6vw;
+    height: 7.5vw;
+    max-width: 50px;
+    max-height: 62.5px;
+    margin: 2vw;
+}
+
 .invisible {
     opacity: 0%;
 }
