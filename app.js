@@ -82,7 +82,7 @@ for (let i = 0; i < normal_count.length; i++) {
 /* Save Image Button */
 function downImg(){
     const checkerboard = document.querySelector(".checkerboard");
-	html2canvas(checkerboard,{ backgroundColor: "#180134", scale: 2816/checkerboard.offsetWidth, logging: true, letterRendering: 1, allowTaint: false,  useCORS: true }).then(function(canvas){
+	html2canvas(checkerboard,{ backgroundColor: "#180134", scale: 1408/checkerboard.offsetWidth, logging: true, letterRendering: 1, allowTaint: false,  useCORS: true }).then(function(canvas){
 		const myImage = canvas.toDataURL();
 		downloadURL(myImage, "image.png") 
 	});
