@@ -266,11 +266,31 @@ input:focus {
 }
 
 .invisible {
-    opacity: 0%;
+    display: none;
 }
 
 .displayNone {
     display: none;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.animation {
+    animation: fadeInOut 5s infinite;
+}
+
+.animationRecord {
+    animation: fadeInOut 5s;   
 }
 
 .honoka__order {

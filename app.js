@@ -319,18 +319,24 @@ function changeCardStyle() {
         for (let i = 0; i < signature.length; i++) {
             signature[i].classList.remove("displayNone");
             rainbow[i].classList.add("displayNone");
+            signature[i].classList.add("animation");
+            rainbow[i].classList.remove("animation");
         }
         changeCardStyleButton.innerText = "Signature";
     } else if (changeCardStyleButton_click_count % 4 === 1) {
         for (let i = 0; i < signature.length; i++) {
             signature[i].classList.add("displayNone");
             rainbow[i].classList.remove("displayNone");
+            signature[i].classList.remove("animation");
+            rainbow[i].classList.add("animation");
         }
         changeCardStyleButton.innerText = "Rainbow";
     } else if (changeCardStyleButton_click_count % 4 === 2) {
         for (let i = 0; i < signature.length; i++) {
             signature[i].classList.remove("displayNone");
             rainbow[i].classList.remove("displayNone");
+            signature[i].classList.remove("animation");
+            rainbow[i].classList.add("animation");
         }
         changeCardStyleButton.innerText = "Signature + Rainbow";
     } else {
