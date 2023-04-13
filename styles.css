@@ -289,10 +289,6 @@ input:focus {
     animation: fadeInOut 5s infinite;
 }
 
-.animationRecord {
-    animation: fadeInOut 5s;   
-}
-
 .honoka__order {
     order: 1;
 }

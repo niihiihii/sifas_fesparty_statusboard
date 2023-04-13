@@ -66,6 +66,15 @@ function displayCard(cards, count, num) {
 function changeCard(cards, count, num) {
     count[num]++;
     displayCard(cards, count, num);
+    if (count[num] % 7 === 6) {
+        for (let i = 0; i < signature.length; i++) {
+            signature[i].classList.toggle("animation");
+            rainbow[i].classList.toggle("animation");
+            void document.querySelector(".checkerboard").offsetWidth;
+            signature[i].classList.toggle("animation");
+            rainbow[i].classList.toggle("animation");
+        }
+    }
 }
 
 for (let i = 0; i < fes_count.length; i++) {
@@ -170,6 +179,14 @@ function applyData() {
     }
     for (let i = 0; i < normal_count.length; i++) {
         displayCard(normal_cards, normal_count ,i);
+    }
+
+    for (let i = 0; i < signature.length; i++) {
+        signature[i].classList.toggle("animation");
+        rainbow[i].classList.toggle("animation");
+        void document.querySelector(".checkerboard").offsetWidth;
+        signature[i].classList.toggle("animation");
+        rainbow[i].classList.toggle("animation");
     }
 
     inputDataModal.close();
