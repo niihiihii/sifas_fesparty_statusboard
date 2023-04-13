@@ -9,12 +9,12 @@ body {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-    max-width: 1408px;
-    width: 99vw;
+    max-width: 1422px;
+    width: 100vw;
 }
 .checkerboard {
-    max-width: 1408px;
-    width: 99vw;
+    max-width: 1422px;
+    width: 100vw;
 }
 
 .section {
@@ -23,8 +23,8 @@ body {
 
 .sidebar {
     display: flex;
-    max-width: 128px;
-    width: 9vw;
+    max-width: 142px;
+    width: 10vw;
     min-height: 9vw;
     justify-content: center;
     align-items: center;
