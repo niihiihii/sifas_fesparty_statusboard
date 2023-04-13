@@ -266,7 +266,11 @@ input:focus {
 }
 
 .invisible {
-    display: none;
+    opacity: 0%;
+}
+
+.invisible2 {
+    opacity: 0%;
 }
 
 .displayNone {
