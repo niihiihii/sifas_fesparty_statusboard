@@ -172,14 +172,6 @@ function applyData() {
         displayCard(normal_cards, normal_count ,i);
     }
 
-    for (let i = 0; i < signature.length; i++) {
-        signature[i].classList.toggle("animation");
-        rainbow[i].classList.toggle("animation");
-        void document.querySelector(".checkerboard").offsetWidth;
-        signature[i].classList.toggle("animation");
-        rainbow[i].classList.toggle("animation");
-    }
-
     inputDataModal.close();
     
 }
@@ -325,26 +317,26 @@ function changeCardStyle() {
     changeCardStyleButton_click_count++;
     if (changeCardStyleButton_click_count % 4 === 0) {
         for (let i = 0; i < signature.length; i++) {
-            signature[i].classList.remove("displayNone");
-            rainbow[i].classList.add("displayNone");
+            signature[i].classList.remove("invisible2");
+            rainbow[i].classList.add("invisible2");
         }
         changeCardStyleButton.innerText = "Signature";
     } else if (changeCardStyleButton_click_count % 4 === 1) {
         for (let i = 0; i < signature.length; i++) {
-            signature[i].classList.add("displayNone");
-            rainbow[i].classList.remove("displayNone");
+            signature[i].classList.add("invisible2");
+            rainbow[i].classList.remove("invisible2");
         }
         changeCardStyleButton.innerText = "Rainbow";
     } else if (changeCardStyleButton_click_count % 4 === 2) {
         for (let i = 0; i < signature.length; i++) {
-            signature[i].classList.remove("displayNone");
-            rainbow[i].classList.remove("displayNone");
+            signature[i].classList.remove("invisible2");
+            rainbow[i].classList.remove("invisible2");
         }
         changeCardStyleButton.innerText = "Signature + Rainbow";
     } else {
         for (let i = 0; i < signature.length; i++) {
-            signature[i].classList.add("displayNone");
-            rainbow[i].classList.add("displayNone");
+            signature[i].classList.add("invisible2");
+            rainbow[i].classList.add("invisible2");
         }
         changeCardStyleButton.innerText = "none";
     }
