@@ -163,7 +163,7 @@ img {
     margin: 1vw;
 }
 
-.sortByGroupSwitch, .changeCardStyleButton {
+.modalLongButton {
     width: 32vw;
     height: 5vw;
     max-width: 200px;
@@ -391,10 +391,10 @@ input:focus {
     label {
         font-size: 16px;
     }
-    .modalSmallButton, .sortByGroupSwitch, .changeCardStyleButton {
+    .modalSmallButton, .modalLongButton {
         margin: 6px;
     }
-    .sortByGroupSwitch, .changeCardStyleButton {
+    .modalLongButton {
         font-size: 16px;
     }
 }
